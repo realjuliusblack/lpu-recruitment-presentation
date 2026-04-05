@@ -290,6 +290,12 @@ html, body {
 
 .hero-title .cyan { color: var(--cyan); }
 
+.nav-hint-mobile { display: none; }
+@media (max-width: 768px) {
+  .nav-hint-desktop { display: none; }
+  .nav-hint-mobile { display: inline; }
+}
+
 .hero-subtitle {
   font-size: clamp(18px, 2vw, 24px);
   font-weight: 400;
@@ -1656,7 +1662,7 @@ html, body {
   </div>
   <h1 class="hero-title stagger-2">The <span class="cyan">Recruitment</span> Agent</h1>
   <p class="hero-subtitle stagger-3">Five intelligent engines working around the clock. Sourcing, qualifying, submitting, verifying, and presenting physicians. Automatically.</p>
-  <p class="hero-subtitle stagger-4" style="margin-top:32px;font-size:15px;color:var(--t3);">Press <span style="color:var(--cyan);font-weight:600;">&#8594;</span> to begin</p>
+  <p class="hero-subtitle stagger-4" style="margin-top:32px;font-size:15px;color:var(--t3);"><span class="nav-hint-desktop">Press <span style="color:var(--cyan);font-weight:600;">&#8594;</span> to begin</span><span class="nav-hint-mobile">Swipe to begin</span></p>
 </div>
 
 <!-- SLIDE 1: THE PROBLEM -->
