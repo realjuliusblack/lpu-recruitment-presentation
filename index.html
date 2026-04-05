@@ -1973,42 +1973,22 @@ html, body {
   </svg>
   <span class="section-label stagger-1">Say Hello</span>
   <h2 class="section-title stagger-2" style="font-size:clamp(36px,4.5vw,56px);">Meet Your New <span style="color:var(--cyan);">Agent</span></h2>
-  <div class="stagger-3" style="display:flex;flex-direction:column;align-items:center;margin-top:20px;max-width:600px;width:100%;">
-    <!-- AI Robot Face -->
-    <div style="position:relative;width:220px;height:220px;">
+  <div class="stagger-3" style="display:flex;flex-direction:column;align-items:center;margin-top:24px;max-width:600px;width:100%;">
+    <!-- AI Core visual -->
+    <div style="position:relative;width:200px;height:200px;">
       <!-- Pulsing outer ring -->
-      <div style="position:absolute;inset:0;border-radius:50%;border:1px solid rgba(0,204,255,0.08);animation:pulse-ring 3s ease-in-out infinite;"></div>
+      <div style="position:absolute;inset:0;border-radius:50%;border:1px solid rgba(0,204,255,0.1);animation:pulse-ring 3s ease-in-out infinite;"></div>
       <!-- Middle ring -->
-      <div style="position:absolute;inset:12px;border-radius:50%;border:1px solid rgba(0,204,255,0.15);"></div>
-      <!-- Inner core with robot face -->
-      <div style="position:absolute;inset:28px;border-radius:50%;border:2px solid rgba(0,204,255,0.3);background:radial-gradient(circle,rgba(0,204,255,0.06) 0%,transparent 70%);box-shadow:0 0 50px rgba(0,204,255,0.15),0 0 100px rgba(0,204,255,0.05);display:flex;align-items:center;justify-content:center;">
-        <svg viewBox="0 0 120 120" style="width:100px;height:100px;filter:drop-shadow(0 0 16px rgba(0,204,255,0.5));">
-          <!-- Antenna -->
-          <line x1="60" y1="8" x2="60" y2="20" stroke="#00ccff" stroke-width="2" opacity="0.6"/>
-          <circle cx="60" cy="6" r="3" fill="#00ccff" opacity="0.8"/>
-          <!-- Head shell -->
-          <rect x="25" y="22" width="70" height="58" rx="16" fill="rgba(0,204,255,0.06)" stroke="#00ccff" stroke-width="1.5" opacity="0.8"/>
-          <!-- Left eye -->
-          <rect x="38" y="40" width="16" height="10" rx="3" fill="#00ccff" opacity="0.9"/>
-          <rect x="40" y="42" width="6" height="6" rx="1" fill="#0a0b10"/>
-          <!-- Right eye -->
-          <rect x="66" y="40" width="16" height="10" rx="3" fill="#00ccff" opacity="0.9"/>
-          <rect x="68" y="42" width="6" height="6" rx="1" fill="#0a0b10"/>
-          <!-- Mouth grille -->
-          <line x1="42" y1="62" x2="78" y2="62" stroke="#00ccff" stroke-width="1.5" opacity="0.5"/>
-          <line x1="42" y1="66" x2="78" y2="66" stroke="#00ccff" stroke-width="1" opacity="0.3"/>
-          <line x1="42" y1="70" x2="78" y2="70" stroke="#00ccff" stroke-width="0.8" opacity="0.2"/>
-          <!-- Ear nodes -->
-          <circle cx="22" cy="50" r="5" fill="rgba(0,204,255,0.1)" stroke="#00ccff" stroke-width="1" opacity="0.5"/>
-          <circle cx="98" cy="50" r="5" fill="rgba(0,204,255,0.1)" stroke="#00ccff" stroke-width="1" opacity="0.5"/>
-          <!-- Neck -->
-          <rect x="50" y="80" width="20" height="12" rx="3" fill="rgba(0,204,255,0.04)" stroke="#00ccff" stroke-width="1" opacity="0.4"/>
-          <!-- Shoulders hint -->
-          <path d="M35 92 L50 92 L50 98 L35 102 Z" fill="rgba(0,204,255,0.04)" stroke="#00ccff" stroke-width="0.8" opacity="0.3"/>
-          <path d="M85 92 L70 92 L70 98 L85 102 Z" fill="rgba(0,204,255,0.04)" stroke="#00ccff" stroke-width="0.8" opacity="0.3"/>
-          <!-- HUD elements -->
-          <text x="60" y="116" text-anchor="middle" fill="#00ccff" font-size="6" font-family="monospace" opacity="0.4">RA-001 // ACTIVE</text>
+      <div style="position:absolute;inset:15px;border-radius:50%;border:1.5px solid rgba(0,204,255,0.2);"></div>
+      <!-- Inner core -->
+      <div style="position:absolute;inset:35px;border-radius:50%;border:2px solid rgba(0,204,255,0.35);background:radial-gradient(circle,rgba(0,204,255,0.08) 0%,transparent 70%);box-shadow:0 0 40px rgba(0,204,255,0.15),0 0 80px rgba(0,204,255,0.05);display:flex;align-items:center;justify-content:center;">
+        <svg viewBox="0 0 24 24" style="width:64px;height:64px;fill:var(--cyan);filter:drop-shadow(0 0 16px rgba(0,204,255,0.5));">
+          <path d="M20 9V7c0-1.1-.9-2-2-2h-3c0-1.66-1.34-3-3-3S9 3.34 9 5H6c-1.1 0-2 .9-2 2v2c-1.66 0-3 1.34-3 3s1.34 3 3 3v4c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-4c1.66 0 3-1.34 3-3s-1.34-3-3-3zM7.5 11.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5S9.83 13 9 13s-1.5-.67-1.5-1.5zM16 17H8v-2h8v2zm-1-4c-.83 0-1.5-.67-1.5-1.5S14.17 10 15 10s1.5.67 1.5 1.5S15.83 13 15 13z"/>
         </svg>
+      </div>
+      <!-- Scanning line animation -->
+      <div style="position:absolute;inset:35px;border-radius:50%;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:0.4;animation:codeRain 3s linear infinite;"></div>
       </div>
     </div>
     <div class="agent-designation">Recruitment Agent</div>
