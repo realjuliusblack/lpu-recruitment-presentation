@@ -1974,47 +1974,22 @@ html, body {
   <span class="section-label stagger-1">Introducing</span>
   <h2 class="section-title stagger-2" style="font-size:clamp(36px,4.5vw,56px);">The Recruitment <span style="color:var(--cyan);">Agent</span></h2>
   <div class="stagger-3" style="display:flex;flex-direction:column;align-items:center;margin-top:24px;max-width:600px;width:100%;">
-    <!-- Matrix figure -->
-    <div class="agent-figure">
-      <div class="agent-silhouette">
-        <!-- Code rain fill masked to human shape -->
-        <div class="agent-code-fill">
-          <div class="agent-code-columns">
-            <div class="agent-code-col">01001101011010010110010001100001011100110010000001000001010010010010</div>
-            <div class="agent-code-col">10110100101000001100111011001010110111001110100001000000101001001100</div>
-            <div class="agent-code-col">00101110001101010011001000101111001100000011010100110010001011010011</div>
-            <div class="agent-code-col">01010010011001010110001101110010011101010110100101110100011011010110</div>
-            <div class="agent-code-col">01100101011011100111010000100000010000010110011101100101011011100111</div>
-            <div class="agent-code-col">01001100011011110110001101110101011011010111001100100000010101010110</div>
-            <div class="agent-code-col">11101001101001011101000110010101100100001000000100001001101100011000</div>
-            <div class="agent-code-col">01100011011010110010000001001100011000010110001001100101011011000010</div>
-            <div class="agent-code-col">00000100001101100101011100100111010001101001011001100110100101100101</div>
-            <div class="agent-code-col">01100100001000000101001001100101011000110111001001110101011010010111</div>
-            <div class="agent-code-col">01000110110101100101011011100111010000100000010000010110011101100101</div>
-            <div class="agent-code-col">01101110011101000100110001101111011000110111010101101101011100110010</div>
-          </div>
-        </div>
-        <!-- Cyan outline on top -->
-        <div class="agent-outline">
-          <svg viewBox="0 0 140 260" xmlns="http://www.w3.org/2000/svg">
-            <!-- Head -->
-            <circle cx="70" cy="22" r="20" fill="none" stroke="var(--cyan)" stroke-width="1" opacity="0.6"/>
-            <!-- Neck -->
-            <rect x="63" y="42" width="14" height="10" fill="none" stroke="var(--cyan)" stroke-width="0.5" opacity="0.3"/>
-            <!-- Shoulders + Torso -->
-            <path d="M70 50 L18 74 L14 80 L14 144 L28 144 L28 110 L58 110 L58 144 L82 144 L82 110 L112 110 L112 144 L126 144 L126 80 L122 74 Z"
-              fill="none" stroke="var(--cyan)" stroke-width="1" opacity="0.6"/>
-            <!-- Left leg -->
-            <rect x="30" y="144" width="26" height="114" rx="3" fill="none" stroke="var(--cyan)" stroke-width="1" opacity="0.5"/>
-            <!-- Right leg -->
-            <rect x="84" y="144" width="26" height="114" rx="3" fill="none" stroke="var(--cyan)" stroke-width="1" opacity="0.5"/>
-            <!-- Tie -->
-            <path d="M67 52 L70 70 L73 52" fill="none" stroke="var(--cyan)" stroke-width="0.8" opacity="0.4"/>
-            <!-- Lapel lines -->
-            <path d="M58 74 L64 110" fill="none" stroke="var(--cyan)" stroke-width="0.5" opacity="0.3"/>
-            <path d="M82 74 L76 110" fill="none" stroke="var(--cyan)" stroke-width="0.5" opacity="0.3"/>
-          </svg>
-        </div>
+    <!-- AI Core visual -->
+    <div style="position:relative;width:180px;height:180px;">
+      <!-- Pulsing outer ring -->
+      <div style="position:absolute;inset:0;border-radius:50%;border:1px solid rgba(0,204,255,0.1);animation:pulse-ring 3s ease-in-out infinite;"></div>
+      <!-- Middle ring -->
+      <div style="position:absolute;inset:15px;border-radius:50%;border:1.5px solid rgba(0,204,255,0.2);"></div>
+      <!-- Inner core -->
+      <div style="position:absolute;inset:35px;border-radius:50%;border:2px solid rgba(0,204,255,0.35);background:radial-gradient(circle,rgba(0,204,255,0.08) 0%,transparent 70%);box-shadow:0 0 40px rgba(0,204,255,0.15),0 0 80px rgba(0,204,255,0.05);display:flex;align-items:center;justify-content:center;">
+        <!-- Robot/AI head icon -->
+        <svg viewBox="0 0 24 24" style="width:52px;height:52px;fill:var(--cyan);filter:drop-shadow(0 0 12px rgba(0,204,255,0.5));">
+          <path d="M20 9V7c0-1.1-.9-2-2-2h-3c0-1.66-1.34-3-3-3S9 3.34 9 5H6c-1.1 0-2 .9-2 2v2c-1.66 0-3 1.34-3 3s1.34 3 3 3v4c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-4c1.66 0 3-1.34 3-3s-1.34-3-3-3zM7.5 11.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5S9.83 13 9 13s-1.5-.67-1.5-1.5zM16 17H8v-2h8v2zm-1-4c-.83 0-1.5-.67-1.5-1.5S14.17 10 15 10s1.5.67 1.5 1.5S15.83 13 15 13z"/>
+        </svg>
+      </div>
+      <!-- Scanning line animation -->
+      <div style="position:absolute;inset:35px;border-radius:50%;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:0.4;animation:codeRain 3s linear infinite;"></div>
       </div>
     </div>
     <div class="agent-designation">Recruitment Agent</div>
