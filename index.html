@@ -1488,101 +1488,145 @@ html, body {
     height: 36px;
   }
 
-  /* MOBILE OVERFLOW FIX: allow scroll on content-heavy slides */
+  /* MOBILE: no scrolling, everything must fit */
   .slide {
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
   }
 
   /* Slide 1 (Problem): smaller cards */
   .problem-card {
-    padding: 16px 14px;
+    padding: 14px 12px;
   }
   .problem-card .p-icon {
-    width: 36px;
-    height: 36px;
-    margin-bottom: 10px;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
   }
-  .problem-card h3 { font-size: 14px; }
-  .problem-card p { font-size: 12px; }
+  .problem-card h3 { font-size: 13px; }
+  .problem-card p { font-size: 11px; }
 
-  /* Slide 3 (Job Board): shrink mockup */
+  /* Slide 3 (Job Board): hide mockup on mobile, show bullets only */
   [data-slide="3"] .engine-visual {
-    flex: 0 0 auto !important;
-    height: auto !important;
+    display: none !important;
   }
-  [data-slide="3"] .engine-visual > div {
-    width: 100% !important;
-    max-width: 280px !important;
+  [data-slide="3"] .engine-layout {
+    margin-top: 20px !important;
   }
 
   /* Slide 4 (Qualification): fix score badges wrapping */
   .score-badge {
-    font-size: 11px;
-    padding: 2px 8px;
-    margin-bottom: 4px;
+    font-size: 10px;
+    padding: 2px 6px;
+    margin-bottom: 2px;
   }
 
   /* Bullet alignment fix */
   .engine-bullets li {
     align-items: flex-start;
+    font-size: 13px !important;
+    gap: 10px !important;
   }
   .engine-bullets li .bullet-icon {
-    margin-top: 3px;
+    margin-top: 2px;
+    width: 22px !important;
+    height: 22px !important;
+    min-width: 22px;
+  }
+  .engine-bullets li .bullet-icon svg {
+    width: 12px !important;
+    height: 12px !important;
+  }
+  .engine-bullets {
+    gap: 10px !important;
+    margin-top: 16px !important;
+  }
+  .impact-box {
+    margin-top: 16px !important;
+    padding: 14px 16px !important;
+  }
+  .impact-text {
+    font-size: 13px !important;
   }
 
-  /* Slide 8 (Numbers): smaller cards, 2-col on mobile */
+  /* Slide 8 (Numbers): 2-col, compact */
   .numbers-grid {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 8px;
-    margin-top: 24px;
+    gap: 6px;
+    margin-top: 16px;
   }
   .number-card {
-    padding: 16px 12px;
+    padding: 12px 8px;
   }
   .number-value {
-    font-size: 32px;
+    font-size: 28px;
   }
   .number-desc {
-    font-size: 12px;
+    font-size: 11px;
   }
 
-  /* Slide 10 (Financial): tighter */
+  /* Slide 10 (Financial): aggressive compression */
   .finance-layout {
-    margin-top: 20px !important;
-    gap: 12px;
+    margin-top: 12px !important;
+    gap: 8px;
   }
   .finance-card {
-    padding: 18px 16px !important;
+    padding: 12px 14px !important;
   }
   .finance-card .f-value {
-    font-size: 28px;
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+  .finance-card .f-desc {
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+  }
+  .finance-card .f-label {
+    font-size: 9px;
+    margin-bottom: 4px;
   }
 
   /* Slide 14 (LU 2.0): compact org chart */
   .next-agents {
-    gap: 10px !important;
+    gap: 8px !important;
   }
   .next-agent-card {
-    padding: 14px 12px !important;
+    padding: 10px 10px !important;
   }
   .next-agent-card h3 {
-    font-size: 14px !important;
+    font-size: 13px !important;
+  }
+  .next-agent-card p {
+    font-size: 10px !important;
   }
   .next-agent-card .na-icon {
-    width: 36px !important;
-    height: 36px !important;
-    margin-bottom: 6px !important;
+    width: 30px !important;
+    height: 30px !important;
+    margin-bottom: 4px !important;
+  }
+  .next-agent-card::after {
+    font-size: 7px !important;
+    padding: 2px 24px !important;
+    top: 8px !important;
+    right: -30px !important;
   }
 
-  /* Slide 15 (MSP): tighter cards */
-  .finance-card .f-label {
-    font-size: 10px;
-    margin-bottom: 6px;
+  /* Slide 15 (MSP): remove full-width card text, compress everything */
+  [data-slide="15"] .finance-layout {
+    gap: 6px !important;
   }
-  .finance-card .f-desc {
-    font-size: 13px !important;
+  [data-slide="15"] .finance-card {
+    padding: 10px 12px !important;
+  }
+  [data-slide="15"] .finance-card .f-desc {
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+  }
+  [data-slide="15"] .finance-card.full-width {
+    display: none !important;
+  }
+  [data-slide="15"] .section-desc {
+    font-size: 12px !important;
+    margin-top: 8px !important;
   }
 
   /* Pipeline bar: more compact on mobile */
