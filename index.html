@@ -1879,27 +1879,34 @@ html, body {
   <div class="pipeline-connector" data-connector="1"></div>
   <div class="pipeline-node">
     <div class="pipeline-icon" data-engine="2">
-      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-      <span class="pipeline-label">Qualify</span>
+      <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+      <span class="pipeline-label">Find</span>
     </div>
   </div>
   <div class="pipeline-connector" data-connector="2"></div>
   <div class="pipeline-node">
     <div class="pipeline-icon" data-engine="3">
-      <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-      <span class="pipeline-label">Name Clear</span>
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      <span class="pipeline-label">Qualify</span>
     </div>
   </div>
   <div class="pipeline-connector" data-connector="3"></div>
   <div class="pipeline-node">
     <div class="pipeline-icon" data-engine="4">
-      <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-      <span class="pipeline-label">Verify</span>
+      <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+      <span class="pipeline-label">Name Clear</span>
     </div>
   </div>
   <div class="pipeline-connector" data-connector="4"></div>
   <div class="pipeline-node">
     <div class="pipeline-icon" data-engine="5">
+      <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+      <span class="pipeline-label">Verify</span>
+    </div>
+  </div>
+  <div class="pipeline-connector" data-connector="5"></div>
+  <div class="pipeline-node">
+    <div class="pipeline-icon" data-engine="6">
       <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
       <span class="pipeline-label">Present</span>
     </div>
@@ -1976,36 +1983,41 @@ html, body {
 <!-- SLIDE 3: THE FIVE ENGINES -->
 <div class="slide" data-slide="3">
   <span class="section-label stagger-1">Under the Hood</span>
-  <h2 class="section-title stagger-2" style="font-size:clamp(32px,3.5vw,48px);">Five Engines. <span style="color:var(--cyan);">One Pipeline.</span></h2>
-  <p class="section-desc stagger-3" style="max-width:560px;font-size:15px;">Your agent is built from five specialized engines. Each one owns a stage of the recruitment pipeline. Let's take a deep dive into each one.</p>
-  <div class="engine-strip stagger-4" style="width:100%;max-width:700px;margin-top:32px;gap:12px;">
-    <div class="engine-strip-item" style="padding:20px 8px;">
-      <div class="esi-icon" style="width:36px;height:36px;margin-bottom:8px;"><svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg></div>
-      <div class="esi-label" style="font-size:10px;">Source</div>
-      <div style="font-size:10px;color:var(--t3);margin-top:4px;">Find jobs</div>
+  <h2 class="section-title stagger-2" style="font-size:clamp(32px,3.5vw,48px);">Six Engines. <span style="color:var(--cyan);">One Pipeline.</span></h2>
+  <p class="section-desc stagger-3" style="max-width:560px;font-size:15px;">Your agent is built from six specialized engines. Each one owns a stage of the recruitment pipeline. Let's take a deep dive into each one.</p>
+  <div class="engine-strip stagger-4" style="width:100%;max-width:800px;margin-top:32px;gap:10px;">
+    <div class="engine-strip-item" style="padding:18px 6px;">
+      <div class="esi-icon" style="width:32px;height:32px;margin-bottom:6px;"><svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg></div>
+      <div class="esi-label" style="font-size:9px;">Source</div>
+      <div style="font-size:9px;color:var(--t3);margin-top:3px;">Find jobs</div>
     </div>
-    <div class="engine-strip-item" style="padding:20px 8px;">
-      <div class="esi-icon" style="width:36px;height:36px;margin-bottom:8px;"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-      <div class="esi-label" style="font-size:10px;">Qualify</div>
-      <div style="font-size:10px;color:var(--t3);margin-top:4px;">Score candidates</div>
+    <div class="engine-strip-item" style="padding:18px 6px;">
+      <div class="esi-icon" style="width:32px;height:32px;margin-bottom:6px;"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
+      <div class="esi-label" style="font-size:9px;">Find</div>
+      <div style="font-size:9px;color:var(--t3);margin-top:3px;">Find physicians</div>
     </div>
-    <div class="engine-strip-item" style="padding:20px 8px;">
-      <div class="esi-icon" style="width:36px;height:36px;margin-bottom:8px;"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></div>
-      <div class="esi-label" style="font-size:10px;">Name Clear</div>
-      <div style="font-size:10px;color:var(--t3);margin-top:4px;">Submit to facilities</div>
+    <div class="engine-strip-item" style="padding:18px 6px;">
+      <div class="esi-icon" style="width:32px;height:32px;margin-bottom:6px;"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+      <div class="esi-label" style="font-size:9px;">Qualify</div>
+      <div style="font-size:9px;color:var(--t3);margin-top:3px;">Score candidates</div>
     </div>
-    <div class="engine-strip-item" style="padding:20px 8px;">
-      <div class="esi-icon" style="width:36px;height:36px;margin-bottom:8px;"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div>
-      <div class="esi-label" style="font-size:10px;">Verify</div>
-      <div style="font-size:10px;color:var(--t3);margin-top:4px;">Background check</div>
+    <div class="engine-strip-item" style="padding:18px 6px;">
+      <div class="esi-icon" style="width:32px;height:32px;margin-bottom:6px;"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></div>
+      <div class="esi-label" style="font-size:9px;">Name Clear</div>
+      <div style="font-size:9px;color:var(--t3);margin-top:3px;">Submit to facilities</div>
     </div>
-    <div class="engine-strip-item" style="padding:20px 8px;">
-      <div class="esi-icon" style="width:36px;height:36px;margin-bottom:8px;"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
-      <div class="esi-label" style="font-size:10px;">Present</div>
-      <div style="font-size:10px;color:var(--t3);margin-top:4px;">Deliver to facility</div>
+    <div class="engine-strip-item" style="padding:18px 6px;">
+      <div class="esi-icon" style="width:32px;height:32px;margin-bottom:6px;"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div>
+      <div class="esi-label" style="font-size:9px;">Verify</div>
+      <div style="font-size:9px;color:var(--t3);margin-top:3px;">Background check</div>
+    </div>
+    <div class="engine-strip-item" style="padding:18px 6px;">
+      <div class="esi-icon" style="width:32px;height:32px;margin-bottom:6px;"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
+      <div class="esi-label" style="font-size:9px;">Present</div>
+      <div style="font-size:9px;color:var(--t3);margin-top:3px;">Deliver to facility</div>
     </div>
   </div>
-  <p class="section-desc stagger-5" style="margin-top:28px;font-size:14px;color:var(--t3);">Each arrow from here takes you inside one engine.</p>
+  <p class="section-desc stagger-5" style="margin-top:24px;font-size:14px;color:var(--t3);">These engines are always evolving. New features and capabilities are added constantly. Let's dive in.</p>
 </div>
 
 <!-- SLIDE 4: ENGINE 1 — INGESTION -->
@@ -2107,7 +2119,7 @@ html, body {
 </div>
 
 <!-- SLIDE 4: ENGINE 2 — QUALIFICATION -->
-<div class="slide" data-slide="4" data-engine="2">
+<div class="slide" data-slide="4" data-engine="1">
   <div class="engine-layout">
     <div class="engine-visual stagger-1">
       <div class="engine-number">2</div>
@@ -2151,7 +2163,7 @@ html, body {
 </div>
 
 <!-- SLIDE 4: ENGINE 3 — NAME CLEAR -->
-<div class="slide" data-slide="5" data-engine="3">
+<div class="slide" data-slide="5" data-engine="4">
   <div class="engine-layout">
     <div class="engine-visual stagger-1">
       <div class="engine-number">3</div>
@@ -2186,7 +2198,7 @@ html, body {
 </div>
 
 <!-- SLIDE 5: ENGINE 4 — BACKGROUND CHECK -->
-<div class="slide" data-slide="6" data-engine="4">
+<div class="slide" data-slide="6" data-engine="5">
   <div class="engine-layout">
     <div class="engine-visual stagger-1">
       <div class="engine-number">4</div>
@@ -2229,7 +2241,7 @@ html, body {
 </div>
 
 <!-- SLIDE 6: ENGINE 5 — PRESENTATION -->
-<div class="slide" data-slide="7" data-engine="5">
+<div class="slide" data-slide="7" data-engine="6">
   <div class="engine-layout">
     <div class="engine-visual stagger-1">
       <div class="engine-number">5</div>
@@ -2273,7 +2285,7 @@ html, body {
       <div class="number-desc">Automated Workflows</div>
     </div>
     <div class="number-card stagger-4">
-      <div class="number-value"><span class="counter" data-target="5">0</span></div>
+      <div class="number-value"><span class="counter" data-target="6">0</span></div>
       <div class="number-desc">AI Engines Always On</div>
     </div>
     <div class="number-card stagger-5">
