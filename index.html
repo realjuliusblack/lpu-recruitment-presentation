@@ -1523,8 +1523,13 @@ html, body {
     padding: 2px 8px;
     margin-bottom: 4px;
   }
+
+  /* Bullet alignment fix */
   .engine-bullets li {
-    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .engine-bullets li .bullet-icon {
+    margin-top: 3px;
   }
 
   /* Slide 8 (Numbers): smaller cards, 2-col on mobile */
