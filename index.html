@@ -1481,6 +1481,121 @@ html, body {
   .logo-container svg {
     height: 36px;
   }
+
+  /* MOBILE OVERFLOW FIX: allow scroll on content-heavy slides */
+  .slide {
+    overflow-y: auto;
+    overflow-x: hidden;
+    justify-content: flex-start;
+    padding-top: 20px !important;
+    padding-bottom: 60px !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Slide 1 (Problem): smaller cards */
+  .problem-card {
+    padding: 16px 14px;
+  }
+  .problem-card .p-icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 10px;
+  }
+  .problem-card h3 { font-size: 14px; }
+  .problem-card p { font-size: 12px; }
+
+  /* Slide 3 (Job Board): shrink mockup */
+  [data-slide="3"] .engine-visual {
+    flex: 0 0 auto !important;
+    height: auto !important;
+  }
+  [data-slide="3"] .engine-visual > div {
+    width: 100% !important;
+    max-width: 280px !important;
+  }
+
+  /* Slide 4 (Qualification): fix score badges wrapping */
+  .score-badge {
+    font-size: 11px;
+    padding: 2px 8px;
+    margin-bottom: 4px;
+  }
+  .engine-bullets li {
+    flex-wrap: wrap;
+  }
+
+  /* Slide 8 (Numbers): smaller cards, 2-col on mobile */
+  .numbers-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px;
+    margin-top: 24px;
+  }
+  .number-card {
+    padding: 16px 12px;
+  }
+  .number-value {
+    font-size: 32px;
+  }
+  .number-desc {
+    font-size: 12px;
+  }
+
+  /* Slide 10 (Financial): tighter */
+  .finance-layout {
+    margin-top: 20px !important;
+    gap: 12px;
+  }
+  .finance-card {
+    padding: 18px 16px !important;
+  }
+  .finance-card .f-value {
+    font-size: 28px;
+  }
+
+  /* Slide 14 (LU 2.0): compact org chart */
+  .next-agents {
+    gap: 10px !important;
+  }
+  .next-agent-card {
+    padding: 14px 12px !important;
+  }
+  .next-agent-card h3 {
+    font-size: 14px !important;
+  }
+  .next-agent-card .na-icon {
+    width: 36px !important;
+    height: 36px !important;
+    margin-bottom: 6px !important;
+  }
+
+  /* Slide 15 (MSP): tighter cards */
+  .finance-card .f-label {
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+  .finance-card .f-desc {
+    font-size: 13px !important;
+  }
+
+  /* Pipeline bar: more compact on mobile */
+  .pipeline-bar {
+    padding: 8px 12px;
+  }
+  .pipeline-icon {
+    width: 28px;
+    height: 28px;
+  }
+  .pipeline-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+  .pipeline-connector {
+    width: 16px;
+  }
+  .pipeline-label {
+    font-size: 7px;
+    top: 34px;
+  }
 }
 </style>
 </head>
@@ -2297,4 +2412,3 @@ html, body {
 </script>
 </body>
 </html>
-<!-- deployed -->
