@@ -720,6 +720,100 @@ html, body {
    ANIMATIONS
    ═══════════════════════════════════════ */
 /* ═══════════════════════════════════════
+   BLACK LABEL CERTIFICATION (Luxury)
+   ═══════════════════════════════════════ */
+.bl-cert-slide {
+  background: radial-gradient(ellipse at center, rgba(201,169,110,0.04) 0%, transparent 60%);
+}
+
+.bl-seal {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid rgba(201,169,110,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 70%);
+  box-shadow: 0 0 40px rgba(201,169,110,0.1), inset 0 0 30px rgba(201,169,110,0.05);
+}
+
+.bl-seal::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,169,110,0.15);
+}
+
+.bl-seal::after {
+  content: '';
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,169,110,0.08);
+}
+
+.bl-seal svg {
+  width: 48px;
+  height: 48px;
+  fill: #c9a96e;
+  filter: drop-shadow(0 0 8px rgba(201,169,110,0.4));
+}
+
+.bl-gold {
+  background: linear-gradient(135deg, #c9a96e 0%, #e8d5a3 40%, #c9a96e 60%, #a8884a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bl-phase {
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: rgba(201,169,110,0.03);
+  border: 1px solid rgba(201,169,110,0.12);
+  transition: all 0.3s ease;
+}
+
+.bl-phase:hover {
+  border-color: rgba(201,169,110,0.25);
+  background: rgba(201,169,110,0.06);
+}
+
+.bl-phase .bl-phase-num {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c9a96e;
+  margin-bottom: 6px;
+}
+
+.bl-phase .bl-phase-text {
+  font-size: 13px;
+  color: var(--t2);
+  line-height: 1.5;
+}
+
+.bl-score {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.bl-score-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(201,169,110,0.6);
+  margin-top: 6px;
+}
+
+/* ═══════════════════════════════════════
    AGENT FIGURE (Matrix Code Rain)
    ═══════════════════════════════════════ */
 @keyframes codeRain {
@@ -2212,29 +2306,37 @@ html, body {
 </div>
 
 <!-- SLIDE 9: BLACK LABEL CERTIFICATION -->
-<div class="slide" data-slide="9">
-  <span class="section-label stagger-1">Agent Reliability</span>
-  <h2 class="section-title stagger-2" style="font-size:clamp(32px,3.5vw,48px);">Black Label <span style="color:var(--cyan);">Certified</span></h2>
-  <p class="section-desc stagger-3" style="max-width:650px;font-size:16px;">Every engine is battle tested before it goes live. No shortcuts. No "good enough." If it can not survive real conditions, it does not ship.</p>
-  <div class="finance-layout stagger-4" style="max-width:900px;margin-top:24px;">
-    <div class="finance-card highlight">
-      <div class="f-label">Phase 1: Build</div>
-      <div class="f-desc" style="font-size:14px;color:var(--t2);">Every workflow is built to spec, tested against real data, and verified against expected outputs. No simulated data. Real candidates. Real facilities.</div>
+<div class="slide bl-cert-slide" data-slide="9">
+  <!-- Gold seal -->
+  <div class="bl-seal stagger-1">
+    <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+  </div>
+  <h2 class="section-title stagger-2" style="font-size:clamp(36px,4.5vw,56px);margin-top:20px;"><span class="bl-gold">Black Label</span> Certified</h2>
+  <p class="section-desc stagger-3" style="max-width:560px;font-size:15px;color:var(--t3);">Nothing ships without being battle tested. Every engine passes a four-phase certification before it goes live. No shortcuts. No exceptions.</p>
+  <!-- 4 phases in a horizontal strip -->
+  <div class="stagger-4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:900px;width:100%;margin-top:28px;">
+    <div class="bl-phase">
+      <div class="bl-phase-num">Phase I: Build</div>
+      <div class="bl-phase-text">Built to spec. Tested against real data. Real candidates. Real facilities.</div>
     </div>
-    <div class="finance-card highlight">
-      <div class="f-label">Phase 2: Break</div>
-      <div class="f-desc" style="font-size:14px;color:var(--t2);">We actively try to break every workflow. Edge cases, missing data, bad inputs, API failures. If it breaks, we find it before your candidates do.</div>
+    <div class="bl-phase">
+      <div class="bl-phase-num">Phase II: Break</div>
+      <div class="bl-phase-text">We try to break it. Edge cases, bad inputs, API failures. Find it before your team does.</div>
     </div>
-    <div class="finance-card highlight">
-      <div class="f-label">Phase 3: Fix and Harden</div>
-      <div class="f-desc" style="font-size:14px;color:var(--t2);">Every failure becomes a permanent fix. Not a patch. A structural improvement that prevents the issue from ever happening again.</div>
+    <div class="bl-phase">
+      <div class="bl-phase-num">Phase III: Harden</div>
+      <div class="bl-phase-text">Every failure becomes a permanent fix. Not a patch. A structural improvement.</div>
     </div>
-    <div class="finance-card highlight">
-      <div class="f-label">Phase 4: Certify</div>
-      <div class="f-desc" style="font-size:14px;color:var(--t2);">Final audit. Every path tested. Every scenario verified. Only after passing all phases does an engine earn Black Label Certification and go live.</div>
+    <div class="bl-phase">
+      <div class="bl-phase-num">Phase IV: Certify</div>
+      <div class="bl-phase-text">Final audit. Every path. Every scenario. Only then does it earn certification.</div>
     </div>
   </div>
-  <p class="stagger-5" style="margin-top:16px;font-size:14px;color:var(--cyan);font-weight:500;text-align:center;">The Recruitment Agent passed 52 out of 52 test scenarios across all 5 engines.</p>
+  <!-- Score -->
+  <div class="stagger-5" style="margin-top:28px;text-align:center;">
+    <div class="bl-score bl-gold">52 / 52</div>
+    <div class="bl-score-label">Test Scenarios Passed</div>
+  </div>
 </div>
 
 <!-- SLIDE 10: BEFORE vs AFTER -->
