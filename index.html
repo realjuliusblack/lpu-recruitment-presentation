@@ -1958,7 +1958,16 @@ html, body {
   <svg width="0" height="0" style="position:absolute;">
     <defs>
       <clipPath id="agentClip" clipPathUnits="objectBoundingBox">
-        <path d="M0.5,0 C0.45,0 0.41,0.03 0.39,0.06 C0.36,0.04 0.31,0.02 0.26,0.03 C0.21,0.04 0.18,0.06 0.18,0.09 C0.18,0.11 0.19,0.12 0.2,0.13 C0.15,0.14 0.11,0.17 0.11,0.21 L0.11,0.22 C0.06,0.24 0.03,0.26 0.03,0.3 L0.03,0.34 C0.03,0.38 0.06,0.41 0.11,0.42 L0.11,0.6 C0.11,0.61 0.13,0.63 0.14,0.64 L0.23,0.69 L0.23,0.99 C0.23,1 0.24,1 0.25,1 L0.45,1 C0.46,1 0.48,1 0.48,0.99 L0.48,0.71 L0.53,0.71 L0.53,0.99 C0.53,1 0.54,1 0.55,1 L0.75,1 C0.76,1 0.78,1 0.78,0.99 L0.78,0.69 L0.86,0.64 C0.88,0.63 0.89,0.61 0.89,0.6 L0.89,0.42 C0.94,0.41 0.98,0.38 0.98,0.34 L0.98,0.3 C0.98,0.26 0.94,0.24 0.89,0.22 L0.89,0.21 C0.89,0.17 0.85,0.14 0.8,0.13 C0.81,0.12 0.83,0.11 0.83,0.09 C0.83,0.06 0.79,0.04 0.74,0.03 C0.69,0.02 0.64,0.04 0.61,0.06 C0.59,0.03 0.55,0 0.5,0Z"/>
+        <!-- Head -->
+        <circle cx="0.5" cy="0.08" r="0.08"/>
+        <!-- Neck -->
+        <rect x="0.45" y="0.15" width="0.1" height="0.04"/>
+        <!-- Shoulders + Torso (suit jacket) -->
+        <path d="M0.5,0.19 L0.15,0.28 L0.12,0.30 L0.12,0.55 L0.20,0.55 L0.20,0.42 L0.42,0.42 L0.42,0.55 L0.58,0.55 L0.58,0.42 L0.80,0.42 L0.80,0.55 L0.88,0.55 L0.88,0.30 L0.85,0.28 Z"/>
+        <!-- Left leg -->
+        <rect x="0.22" y="0.55" width="0.18" height="0.45" rx="0.02"/>
+        <!-- Right leg -->
+        <rect x="0.60" y="0.55" width="0.18" height="0.45" rx="0.02"/>
       </clipPath>
     </defs>
   </svg>
@@ -1988,8 +1997,22 @@ html, body {
         <!-- Cyan outline on top -->
         <div class="agent-outline">
           <svg viewBox="0 0 140 260" xmlns="http://www.w3.org/2000/svg">
-            <path d="M70 2C62 2 56 10 53 18C49 12 41 8 33 10C25 12 20 20 20 28C20 32 22 36 24 38C16 42 10 50 10 60L10 64C3 68 -2 76 -2 86L-2 98C-2 108 3 116 10 120L10 168C10 172 12 176 14 178L28 192L28 256C28 258 30 258 32 258L64 258C66 258 68 258 68 256L68 200L72 200L72 256C72 258 74 258 76 258L108 258C110 258 112 258 112 256L112 192L126 178C128 176 130 172 130 168L130 120C137 116 142 108 142 98L142 86C142 76 137 68 130 64L130 60C130 50 124 42 116 38C118 36 120 32 120 28C120 20 115 12 107 10C99 8 91 12 87 18C84 10 78 2 70 2Z"
+            <!-- Head -->
+            <circle cx="70" cy="22" r="20" fill="none" stroke="var(--cyan)" stroke-width="1" opacity="0.6"/>
+            <!-- Neck -->
+            <rect x="63" y="42" width="14" height="10" fill="none" stroke="var(--cyan)" stroke-width="0.5" opacity="0.3"/>
+            <!-- Shoulders + Torso -->
+            <path d="M70 50 L18 74 L14 80 L14 144 L28 144 L28 110 L58 110 L58 144 L82 144 L82 110 L112 110 L112 144 L126 144 L126 80 L122 74 Z"
               fill="none" stroke="var(--cyan)" stroke-width="1" opacity="0.6"/>
+            <!-- Left leg -->
+            <rect x="30" y="144" width="26" height="114" rx="3" fill="none" stroke="var(--cyan)" stroke-width="1" opacity="0.5"/>
+            <!-- Right leg -->
+            <rect x="84" y="144" width="26" height="114" rx="3" fill="none" stroke="var(--cyan)" stroke-width="1" opacity="0.5"/>
+            <!-- Tie -->
+            <path d="M67 52 L70 70 L73 52" fill="none" stroke="var(--cyan)" stroke-width="0.8" opacity="0.4"/>
+            <!-- Lapel lines -->
+            <path d="M58 74 L64 110" fill="none" stroke="var(--cyan)" stroke-width="0.5" opacity="0.3"/>
+            <path d="M82 74 L76 110" fill="none" stroke="var(--cyan)" stroke-width="0.5" opacity="0.3"/>
           </svg>
         </div>
       </div>
