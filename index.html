@@ -1859,6 +1859,59 @@ html, body {
     font-size: 7px;
     top: 34px;
   }
+
+  /* Engine slides: smaller ring + number on mobile */
+  .engine-ring {
+    width: 120px !important;
+    height: 120px !important;
+  }
+  .engine-ring svg {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .engine-number {
+    font-size: 50px !important;
+    top: 10px !important;
+    left: 10px !important;
+  }
+  .engine-visual {
+    height: 140px !important;
+  }
+
+  /* Black Label Certification: 2-col phases, smaller seal */
+  .bl-seal {
+    width: 80px;
+    height: 80px;
+  }
+  .bl-seal svg {
+    width: 32px;
+    height: 32px;
+  }
+  .bl-seal::before { inset: -4px; }
+  .bl-seal::after { inset: -10px; }
+  .bl-phase {
+    padding: 10px 12px;
+  }
+  .bl-phase .bl-phase-num {
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+  }
+  .bl-phase .bl-phase-text {
+    font-size: 11px;
+    line-height: 1.3;
+  }
+  .bl-cert-slide .finance-layout {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+    margin-top: 16px !important;
+  }
+  .bl-score {
+    font-size: 36px !important;
+  }
+  .bl-score-label {
+    font-size: 9px;
+  }
 }
 </style>
 </head>
