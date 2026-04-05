@@ -1954,60 +1954,60 @@ html, body {
 
 <!-- SLIDE 2: MEET THE AGENT -->
 <div class="slide" data-slide="2">
-  <!-- Hidden SVG clipPath definition -->
-  <svg width="0" height="0" style="position:absolute;">
-    <defs>
-      <clipPath id="agentClip" clipPathUnits="objectBoundingBox">
-        <!-- Head -->
-        <circle cx="0.5" cy="0.08" r="0.08"/>
-        <!-- Neck -->
-        <rect x="0.45" y="0.15" width="0.1" height="0.04"/>
-        <!-- Shoulders + Torso (suit jacket) -->
-        <path d="M0.5,0.19 L0.15,0.28 L0.12,0.30 L0.12,0.55 L0.20,0.55 L0.20,0.42 L0.42,0.42 L0.42,0.55 L0.58,0.55 L0.58,0.42 L0.80,0.42 L0.80,0.55 L0.88,0.55 L0.88,0.30 L0.85,0.28 Z"/>
-        <!-- Left leg -->
-        <rect x="0.22" y="0.55" width="0.18" height="0.45" rx="0.02"/>
-        <!-- Right leg -->
-        <rect x="0.60" y="0.55" width="0.18" height="0.45" rx="0.02"/>
-      </clipPath>
-    </defs>
-  </svg>
   <span class="section-label stagger-1">Say Hello</span>
   <h2 class="section-title stagger-2" style="font-size:clamp(36px,4.5vw,56px);">Meet Your New <span style="color:var(--cyan);">Agent</span></h2>
-  <div class="stagger-3" style="display:flex;flex-direction:column;align-items:center;margin-top:24px;max-width:600px;width:100%;">
-    <!-- AI Core visual -->
-    <div style="position:relative;width:200px;height:200px;">
-      <!-- Pulsing outer ring -->
-      <div style="position:absolute;inset:0;border-radius:50%;border:1px solid rgba(0,204,255,0.1);animation:pulse-ring 3s ease-in-out infinite;"></div>
-      <!-- Middle ring -->
-      <div style="position:absolute;inset:15px;border-radius:50%;border:1.5px solid rgba(0,204,255,0.2);"></div>
-      <!-- Inner core -->
-      <div style="position:absolute;inset:35px;border-radius:50%;border:2px solid rgba(0,204,255,0.35);background:radial-gradient(circle,rgba(0,204,255,0.08) 0%,transparent 70%);box-shadow:0 0 40px rgba(0,204,255,0.15),0 0 80px rgba(0,204,255,0.05);display:flex;align-items:center;justify-content:center;">
-        <svg viewBox="0 0 24 24" style="width:64px;height:64px;fill:var(--cyan);filter:drop-shadow(0 0 16px rgba(0,204,255,0.5));">
-          <path d="M20 9V7c0-1.1-.9-2-2-2h-3c0-1.66-1.34-3-3-3S9 3.34 9 5H6c-1.1 0-2 .9-2 2v2c-1.66 0-3 1.34-3 3s1.34 3 3 3v4c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-4c1.66 0 3-1.34 3-3s-1.34-3-3-3zM7.5 11.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5S9.83 13 9 13s-1.5-.67-1.5-1.5zM16 17H8v-2h8v2zm-1-4c-.83 0-1.5-.67-1.5-1.5S14.17 10 15 10s1.5.67 1.5 1.5S15.83 13 15 13z"/>
-        </svg>
-      </div>
-      <!-- Scanning line animation -->
-      <div style="position:absolute;inset:35px;border-radius:50%;overflow:hidden;">
-        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:0.4;animation:codeRain 3s linear infinite;"></div>
-      </div>
+  <div class="stagger-3" style="position:relative;width:220px;height:220px;margin-top:28px;">
+    <div style="position:absolute;inset:0;border-radius:50%;border:1px solid rgba(0,204,255,0.1);animation:pulse-ring 3s ease-in-out infinite;"></div>
+    <div style="position:absolute;inset:15px;border-radius:50%;border:1.5px solid rgba(0,204,255,0.2);"></div>
+    <div style="position:absolute;inset:35px;border-radius:50%;border:2px solid rgba(0,204,255,0.35);background:radial-gradient(circle,rgba(0,204,255,0.08) 0%,transparent 70%);box-shadow:0 0 50px rgba(0,204,255,0.15),0 0 100px rgba(0,204,255,0.05);display:flex;align-items:center;justify-content:center;">
+      <svg viewBox="0 0 24 24" style="width:72px;height:72px;fill:var(--cyan);filter:drop-shadow(0 0 20px rgba(0,204,255,0.5));">
+        <path d="M20 9V7c0-1.1-.9-2-2-2h-3c0-1.66-1.34-3-3-3S9 3.34 9 5H6c-1.1 0-2 .9-2 2v2c-1.66 0-3 1.34-3 3s1.34 3 3 3v4c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-4c1.66 0 3-1.34 3-3s-1.34-3-3-3zM7.5 11.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5S9.83 13 9 13s-1.5-.67-1.5-1.5zM16 17H8v-2h8v2zm-1-4c-.83 0-1.5-.67-1.5-1.5S14.17 10 15 10s1.5.67 1.5 1.5S15.83 13 15 13z"/>
+      </svg>
     </div>
-    <div class="agent-designation">Recruitment Agent</div>
-    <!-- Connector -->
-    <div style="width:2px;height:16px;background:rgba(0,204,255,0.25);margin-top:8px;"></div>
-    <div style="width:70%;height:1px;background:rgba(0,204,255,0.15);"></div>
-    <!-- 5 engine strip -->
-    <div class="engine-strip" style="width:100%;margin-top:0;">
-      <div class="engine-strip-item"><div class="esi-icon"><svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg></div><div class="esi-label">Source</div></div>
-      <div class="engine-strip-item"><div class="esi-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div><div class="esi-label">Qualify</div></div>
-      <div class="engine-strip-item"><div class="esi-icon"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></div><div class="esi-label">Name Clear</div></div>
-      <div class="engine-strip-item"><div class="esi-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div><div class="esi-label">Verify</div></div>
-      <div class="engine-strip-item"><div class="esi-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div><div class="esi-label">Present</div></div>
+    <div style="position:absolute;inset:35px;border-radius:50%;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:0.4;animation:codeRain 3s linear infinite;"></div>
     </div>
   </div>
-  <p class="section-desc stagger-4" style="max-width:560px;font-size:15px;margin-top:20px;">Your agent is built from five specialized engines. Each one owns a stage of the pipeline. Together, they run recruitment without human intervention.</p>
+  <div class="agent-designation stagger-4">Recruitment Agent</div>
+  <p class="section-desc stagger-5" style="max-width:560px;font-size:16px;margin-top:20px;">One autonomous system that finds physicians, scores them, submits them to facilities, verifies their background, and presents them for placement. End to end. No hand-holding.</p>
 </div>
 
-<!-- SLIDE 3: ENGINE 1 — INGESTION -->
+<!-- SLIDE 3: THE FIVE ENGINES -->
+<div class="slide" data-slide="3">
+  <span class="section-label stagger-1">Under the Hood</span>
+  <h2 class="section-title stagger-2" style="font-size:clamp(32px,3.5vw,48px);">Five Engines. <span style="color:var(--cyan);">One Pipeline.</span></h2>
+  <p class="section-desc stagger-3" style="max-width:560px;font-size:15px;">Your agent is built from five specialized engines. Each one owns a stage of the recruitment pipeline. Let's take a deep dive into each one.</p>
+  <div class="engine-strip stagger-4" style="width:100%;max-width:700px;margin-top:32px;gap:12px;">
+    <div class="engine-strip-item" style="padding:20px 8px;">
+      <div class="esi-icon" style="width:36px;height:36px;margin-bottom:8px;"><svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg></div>
+      <div class="esi-label" style="font-size:10px;">Source</div>
+      <div style="font-size:10px;color:var(--t3);margin-top:4px;">Find jobs</div>
+    </div>
+    <div class="engine-strip-item" style="padding:20px 8px;">
+      <div class="esi-icon" style="width:36px;height:36px;margin-bottom:8px;"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+      <div class="esi-label" style="font-size:10px;">Qualify</div>
+      <div style="font-size:10px;color:var(--t3);margin-top:4px;">Score candidates</div>
+    </div>
+    <div class="engine-strip-item" style="padding:20px 8px;">
+      <div class="esi-icon" style="width:36px;height:36px;margin-bottom:8px;"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></div>
+      <div class="esi-label" style="font-size:10px;">Name Clear</div>
+      <div style="font-size:10px;color:var(--t3);margin-top:4px;">Submit to facilities</div>
+    </div>
+    <div class="engine-strip-item" style="padding:20px 8px;">
+      <div class="esi-icon" style="width:36px;height:36px;margin-bottom:8px;"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div>
+      <div class="esi-label" style="font-size:10px;">Verify</div>
+      <div style="font-size:10px;color:var(--t3);margin-top:4px;">Background check</div>
+    </div>
+    <div class="engine-strip-item" style="padding:20px 8px;">
+      <div class="esi-icon" style="width:36px;height:36px;margin-bottom:8px;"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
+      <div class="esi-label" style="font-size:10px;">Present</div>
+      <div style="font-size:10px;color:var(--t3);margin-top:4px;">Deliver to facility</div>
+    </div>
+  </div>
+  <p class="section-desc stagger-5" style="margin-top:28px;font-size:14px;color:var(--t3);">Each arrow from here takes you inside one engine.</p>
+</div>
+
+<!-- SLIDE 4: ENGINE 1 — INGESTION -->
 <div class="slide" data-slide="3" data-engine="1">
   <div class="engine-layout">
     <div class="engine-visual stagger-1">
