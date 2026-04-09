@@ -2072,25 +2072,26 @@ html, body {
 
 <!-- SLIDE 4: RATE ENGINE -->
 <div class="slide" data-slide="4">
-  <span class="section-label stagger-1">Rate Engine v2</span>
-  <h2 class="section-title stagger-2">Rates Are Calculated. <span style="color:var(--cyan);">Not Guessed.</span></h2>
-  <p class="section-desc stagger-3" style="max-width:680px;">Every job gets a pay rate and a bill rate. The engine figures out which method to use based on what data came in.</p>
-  <div class="finance-layout stagger-4" style="max-width:1060px;margin-top:24px;grid-template-columns:1fr 1fr;">
+  <span class="section-label stagger-1">Rate Engine</span>
+  <h2 class="section-title stagger-2">Rates Set by Math. <span style="color:var(--cyan);">Not Pulled from Air.</span></h2>
+  <p class="stagger-3" style="display:inline-block;color:#c9a96e;background:rgba(201,169,110,0.08);border:1px solid rgba(201,169,110,0.3);padding:6px 14px;border-radius:4px;font-weight:700;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;margin-bottom:14px;">In Development / Awaiting Final Methodology from Ahmed</p>
+  <p class="section-desc stagger-4" style="max-width:760px;">Every job on the board needs two numbers: the bill rate the facility pays and the pay rate the physician earns. The margin between them is the business. The Rate Engine is the brain that sets both. Once the methodology is locked in, it runs on every incoming job automatically. No guessing. No inconsistencies between quotes. No back and forth on math.</p>
+  <div class="finance-layout stagger-5" style="max-width:1060px;margin-top:24px;grid-template-columns:1fr 1fr;">
     <div class="finance-card highlight">
-      <div class="f-label">When a rate arrives with the job</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">The engine applies a specialty-specific margin to calculate pay rate from bill rate. Emergency Medicine runs at 22%. Most specialties run at 20%. The margin is set per specialty and can be adjusted at any time in a config sheet.</div>
+      <div class="f-label">Method 1: Margin-Based Pricing</div>
+      <div class="f-desc" style="font-size:15px;color:var(--t2);">When a bill rate arrives with the job, the engine applies a specialty-specific margin to calculate pay. Example: a $300/hr Emergency Medicine bill rate at a 22% margin returns $234/hr to the physician. Margins are configurable per specialty, per facility, or per contract type. One config change and every future quote follows.</div>
     </div>
     <div class="finance-card highlight">
-      <div class="f-label">When no rate is provided</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">The engine projects a rate. If there are 5 or more historical jobs on the board for that specialty, it uses the average bill rate from those. If not, it falls back to MGMA and Merritt Hawkins national benchmarks. Either way, a rate is always produced.</div>
+      <div class="f-label">Method 2: Historical Projection</div>
+      <div class="f-desc" style="font-size:15px;color:var(--t2);">When no rate is provided, the engine pulls past jobs in the same specialty and region from the live board and projects a competitive rate from actual market history. Example: a new Hospitalist job in Texas with no rate pulls the last 10 Texas Hospitalist rates and uses the average. Real data, not gut calls.</div>
     </div>
     <div class="finance-card highlight">
-      <div class="f-label">Geographic adjustment</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">Projected rates are adjusted for the state the job is in. California adds 25%. Alaska adds 30%. Mississippi is at 85% of baseline. The engine knows where the job is and prices accordingly.</div>
+      <div class="f-label">Method 3: National Benchmarks</div>
+      <div class="f-desc" style="font-size:15px;color:var(--t2);">When historical data is thin, the engine falls back to MGMA and Merritt Hawkins physician compensation surveys. These are the same benchmarks hospital CFOs use to set their locums budgets. The engine knows them cold and prices against them.</div>
     </div>
     <div class="finance-card highlight">
-      <div class="f-label">Email jobs are protected</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">Rates that arrive via direct email are treated as authoritative. The system does not override them with projections. What the facility sent is what gets stored.</div>
+      <div class="f-label">Method 4: Geographic Adjustment</div>
+      <div class="f-desc" style="font-size:15px;color:var(--t2);">Every projected rate is adjusted for the state the job is in. Example: a baseline Hospitalist rate in San Francisco gets lifted 25%. The same role in rural Mississippi drops to 85%. Same specialty, different market, different number. The engine prices each job for where it actually lives.</div>
     </div>
   </div>
 </div>
