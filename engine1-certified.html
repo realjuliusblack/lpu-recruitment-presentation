@@ -2074,24 +2074,24 @@ html, body {
 <div class="slide" data-slide="4">
   <span class="section-label stagger-1">Rate Engine</span>
   <h2 class="section-title stagger-2">Rates Set by Math. <span style="color:var(--cyan);">Not Pulled from Air.</span></h2>
-  <p class="stagger-3" style="display:inline-block;color:#c9a96e;background:rgba(201,169,110,0.08);border:1px solid rgba(201,169,110,0.3);padding:6px 14px;border-radius:4px;font-weight:700;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;margin-bottom:14px;">In Development / Awaiting Final Methodology from Ahmed</p>
-  <p class="section-desc stagger-4" style="max-width:760px;">Every job on the board needs two numbers: the bill rate the facility pays and the pay rate the physician earns. The margin between them is the business. The Rate Engine is the brain that sets both. Once the methodology is locked in, it runs on every incoming job automatically. No guessing. No inconsistencies between quotes. No back and forth on math.</p>
-  <div class="finance-layout stagger-5" style="max-width:1060px;margin-top:24px;grid-template-columns:1fr 1fr;">
-    <div class="finance-card highlight">
-      <div class="f-label">Method 1: Margin-Based Pricing</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">When a bill rate arrives with the job, the engine applies a specialty-specific margin to calculate pay. Example: a $300/hr Emergency Medicine bill rate at a 22% margin returns $234/hr to the physician. Margins are configurable per specialty, per facility, or per contract type. One config change and every future quote follows.</div>
+  <p class="stagger-3" style="display:inline-block;color:#c9a96e;background:rgba(201,169,110,0.08);border:1px solid rgba(201,169,110,0.3);padding:4px 12px;border-radius:4px;font-weight:700;font-size:10px;letter-spacing:1.4px;text-transform:uppercase;margin-top:2px;margin-bottom:10px;">In Development / Awaiting Methodology from Ahmed</p>
+  <p class="section-desc stagger-4" style="max-width:680px;font-size:15px;">The brain that sets every bill rate and pay rate. Four methods, one engine, zero guesswork.</p>
+  <div class="finance-layout stagger-5" style="max-width:1040px;margin-top:18px;grid-template-columns:1fr 1fr;gap:14px;">
+    <div class="finance-card highlight" style="padding:18px 20px;">
+      <div class="f-label">1. Margin-Based</div>
+      <div class="f-desc" style="font-size:14px;color:var(--t2);line-height:1.5;">Bill rate in, specialty margin applied, pay rate out. A $300/hr EM job at 22% returns $234/hr.</div>
     </div>
-    <div class="finance-card highlight">
-      <div class="f-label">Method 2: Historical Projection</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">When no rate is provided, the engine pulls past jobs in the same specialty and region from the live board and projects a competitive rate from actual market history. Example: a new Hospitalist job in Texas with no rate pulls the last 10 Texas Hospitalist rates and uses the average. Real data, not gut calls.</div>
+    <div class="finance-card highlight" style="padding:18px 20px;">
+      <div class="f-label">2. Historical Projection</div>
+      <div class="f-desc" style="font-size:14px;color:var(--t2);line-height:1.5;">No rate provided? Pull past jobs in the same specialty and region from the board and average them. Real market data.</div>
     </div>
-    <div class="finance-card highlight">
-      <div class="f-label">Method 3: National Benchmarks</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">When historical data is thin, the engine falls back to MGMA and Merritt Hawkins physician compensation surveys. These are the same benchmarks hospital CFOs use to set their locums budgets. The engine knows them cold and prices against them.</div>
+    <div class="finance-card highlight" style="padding:18px 20px;">
+      <div class="f-label">3. National Benchmarks</div>
+      <div class="f-desc" style="font-size:14px;color:var(--t2);line-height:1.5;">Thin history? Fall back to MGMA and Merritt Hawkins surveys. The same benchmarks hospital CFOs use.</div>
     </div>
-    <div class="finance-card highlight">
-      <div class="f-label">Method 4: Geographic Adjustment</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">Every projected rate is adjusted for the state the job is in. Example: a baseline Hospitalist rate in San Francisco gets lifted 25%. The same role in rural Mississippi drops to 85%. Same specialty, different market, different number. The engine prices each job for where it actually lives.</div>
+    <div class="finance-card highlight" style="padding:18px 20px;">
+      <div class="f-label">4. Geographic Adjustment</div>
+      <div class="f-desc" style="font-size:14px;color:var(--t2);line-height:1.5;">Every rate shifted for where the job lives. SF Hospitalist lifted 25%. Rural MS dropped to 85%.</div>
     </div>
   </div>
 </div>
