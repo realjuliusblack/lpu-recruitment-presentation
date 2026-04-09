@@ -2072,25 +2072,25 @@ html, body {
 
 <!-- SLIDE 4: RATE ENGINE -->
 <div class="slide" data-slide="4">
-  <span class="section-label stagger-1">Rate Engine</span>
-  <h2 class="section-title stagger-2">Every Job Gets the <span style="color:var(--cyan);">Right Rate</span></h2>
-  <p class="section-desc stagger-3" style="max-width:620px;">Rates are not typed manually. The system calculates them from a master rate sheet. Every specialty has a standard rate. Any job can override it.</p>
-  <div class="finance-layout stagger-4" style="max-width:1000px;margin-top:28px;">
+  <span class="section-label stagger-1">Rate Engine v2</span>
+  <h2 class="section-title stagger-2">Rates Are Calculated. <span style="color:var(--cyan);">Not Guessed.</span></h2>
+  <p class="section-desc stagger-3" style="max-width:680px;">Every job gets a pay rate and a bill rate. The engine figures out which method to use based on what data came in.</p>
+  <div class="finance-layout stagger-4" style="max-width:1060px;margin-top:24px;grid-template-columns:1fr 1fr;">
     <div class="finance-card highlight">
-      <div class="f-label">Step 1 — Look Up the Specialty</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">When a job comes in, the engine checks a Master Rate Sheet. If the specialty is listed, it uses that rate. No guessing, no estimating.</div>
+      <div class="f-label">When a rate arrives with the job</div>
+      <div class="f-desc" style="font-size:15px;color:var(--t2);">The engine applies a specialty-specific margin to calculate pay rate from bill rate. Emergency Medicine runs at 22%. Most specialties run at 20%. The margin is set per specialty and can be adjusted at any time in a config sheet.</div>
     </div>
     <div class="finance-card highlight">
-      <div class="f-label">Step 2 — Apply Any Override</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">If the job itself has a specific rate (from the platform or the email), that rate takes priority. The standard rate is the fallback. The specific rate always wins.</div>
+      <div class="f-label">When no rate is provided</div>
+      <div class="f-desc" style="font-size:15px;color:var(--t2);">The engine projects a rate. If there are 5 or more historical jobs for that specialty in the tracker, it uses the average bill rate from those. If not, it falls back to MGMA and Merritt Hawkins national benchmarks. Either way, a rate is always produced.</div>
     </div>
     <div class="finance-card highlight">
-      <div class="f-label">Step 3 — Calculate Pay and Bill</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">Pay rate is what the physician earns. Bill rate is what the facility pays. Both are calculated and stored on every job row automatically.</div>
+      <div class="f-label">Geographic adjustment</div>
+      <div class="f-desc" style="font-size:15px;color:var(--t2);">Projected rates are adjusted for the state the job is in. California adds 25%. Alaska adds 30%. Mississippi is at 85% of baseline. The engine knows where the job is and prices accordingly.</div>
     </div>
     <div class="finance-card highlight">
-      <div class="f-label">Live Example</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">An Emergency Medicine job arrives with a facility rate of $250/hr. The rate engine recognises Emergency Medicine and applies the correct spread. The job logs $350 pay rate and $395 bill rate. Done.</div>
+      <div class="f-label">Email jobs are protected</div>
+      <div class="f-desc" style="font-size:15px;color:var(--t2);">Rates that arrive via direct email are treated as authoritative. The system does not override them with projections. What the facility sent is what gets stored.</div>
     </div>
   </div>
 </div>
