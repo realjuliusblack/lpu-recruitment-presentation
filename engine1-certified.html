@@ -1998,12 +1998,12 @@ html, body {
     <div class="finance-card highlight">
       <div class="f-label">Job 2</div>
       <div class="f-value" style="font-size:28px;">Writes Every Description</div>
-      <div class="f-desc">For every new job, an AI agent reads the raw data and writes a full, professional job description from scratch. Stored in Google Docs. Linked in the tracker.</div>
+      <div class="f-desc">For every new job, an AI agent reads the raw data and writes a full, professional job description from scratch. Same tone, same format, every time.</div>
     </div>
     <div class="finance-card highlight full-width">
       <div class="f-label">Job 3</div>
-      <div class="f-value" style="font-size:28px;">Organizes Everything</div>
-      <div class="f-desc">Every job lands in a central Google Sheet with specialty, location, pay rate, bill rate, source, and a direct link to the description. Your team has a live, clean list to work from at all times.</div>
+      <div class="f-value" style="font-size:28px;">Posts to the Job Board</div>
+      <div class="f-desc">Every new job is published to your live, public job board the moment it is processed. Physicians see it within minutes. No manual posting. No formatting. No copy and paste.</div>
     </div>
   </div>
 </div>
@@ -2015,19 +2015,19 @@ html, body {
   <p class="section-desc stagger-3" style="max-width:580px;">Every channel is automated. New jobs flow in without anyone logging in or checking a portal.</p>
   <div class="finance-layout stagger-4" style="max-width:1000px;margin-top:28px;">
     <div class="finance-card highlight">
-      <div class="f-label">Source 1 — LocumSmart</div>
+      <div class="f-label">Source 1: LocumSmart</div>
       <div class="f-value" style="font-size:22px;">Daily Scrape</div>
       <div class="f-desc">A browser agent logs into the LocumSmart portal, navigates through every job listing, and pulls the full details on each one. This runs on a remote server so it is never tied to your computer or internet connection.</div>
     </div>
     <div class="finance-card highlight">
-      <div class="f-label">Source 2 — Aya / LotusOne</div>
+      <div class="f-label">Source 2: Aya / LotusOne</div>
       <div class="f-value" style="font-size:22px;">Hourly Ingest</div>
       <div class="f-desc">The system checks the Aya/LotusOne portal every hour. New jobs posted since the last check are automatically pulled in. You always have the most current listings from this platform.</div>
     </div>
     <div class="finance-card highlight full-width">
-      <div class="f-label">Source 3 — Direct Email</div>
+      <div class="f-label">Source 3: Direct Email</div>
       <div class="f-value" style="font-size:22px;">Every 5 Minutes</div>
-      <div class="f-desc">Facilities and contacts can email jobs directly. Every five minutes the system checks the inbox. Whether the job arrives as a plain text email or a PDF attachment, it gets read, extracted, and added to the tracker automatically.</div>
+      <div class="f-desc">Facilities and contacts can email jobs directly. Every five minutes the system checks the inbox. Whether the job arrives as a plain text email or a PDF attachment, it gets read, extracted, and posted to the job board automatically.</div>
     </div>
   </div>
 </div>
@@ -2055,16 +2055,16 @@ html, body {
         </li>
         <li>
           <div class="bullet-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-          <span><strong>Google Doc created.</strong> The description is saved to a Google Doc automatically. Each job has its own document, named and organised.</span>
+          <span><strong>Consistent, professional copy.</strong> Every description follows the same structure: role, location, schedule, requirements, pay. No matter the source, the output looks like it came from one team.</span>
         </li>
         <li>
           <div class="bullet-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-          <span><strong>Tracker updated.</strong> The Google Sheet row is filled in: job ID, specialty, location, pay rate, bill rate, source, and a direct link to the Google Doc.</span>
+          <span><strong>Posted to the job board.</strong> The finished listing goes live on the public board automatically. Searchable, filterable, and ready for physicians to apply.</span>
         </li>
       </ul>
       <div class="impact-box stagger-5">
         <div class="impact-label">Result</div>
-        <div class="impact-text">Every job that comes in leaves the pipeline with a complete, publish-ready description. No manual writing. No formatting. No copy-paste.</div>
+        <div class="impact-text">Every job that comes in leaves the pipeline as a live, publish-ready listing on the job board. No manual writing. No formatting. No posting.</div>
       </div>
     </div>
   </div>
@@ -2082,7 +2082,7 @@ html, body {
     </div>
     <div class="finance-card highlight">
       <div class="f-label">When no rate is provided</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">The engine projects a rate. If there are 5 or more historical jobs for that specialty in the tracker, it uses the average bill rate from those. If not, it falls back to MGMA and Merritt Hawkins national benchmarks. Either way, a rate is always produced.</div>
+      <div class="f-desc" style="font-size:15px;color:var(--t2);">The engine projects a rate. If there are 5 or more historical jobs on the board for that specialty, it uses the average bill rate from those. If not, it falls back to MGMA and Merritt Hawkins national benchmarks. Either way, a rate is always produced.</div>
     </div>
     <div class="finance-card highlight">
       <div class="f-label">Geographic adjustment</div>
@@ -2122,12 +2122,12 @@ html, body {
         </li>
         <li>
           <div class="bullet-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-          <span><strong>Same pipeline as every other job.</strong> Email jobs go through the JD Engine like any other source. They get a description, a Google Doc, and a tracker row.</span>
+          <span><strong>Same pipeline as every other job.</strong> Email jobs run through the JD Engine and land on the job board exactly like the scraped ones. The sender does not have to format anything.</span>
         </li>
       </ul>
       <div class="impact-box stagger-5">
         <div class="impact-label">Tested and confirmed</div>
-        <div class="impact-text">Two email jobs were processed in the certification test. Tulsa, OK Emergency Medicine ($350/hr) arrived as plain text. Eugene, OR Emergency Medicine ($400/hr) arrived as a PDF. Both landed in the tracker correctly.</div>
+        <div class="impact-text">Two email jobs were processed in the certification test. Tulsa, OK Emergency Medicine ($350/hr) arrived as plain text. Eugene, OR Emergency Medicine ($400/hr) arrived as a PDF. Both landed on the job board correctly.</div>
       </div>
     </div>
   </div>
@@ -2136,24 +2136,24 @@ html, body {
 <!-- SLIDE 6: QC AUDIT AGENT -->
 <div class="slide" data-slide="6">
   <span class="section-label stagger-1">Quality Control</span>
-  <h2 class="section-title stagger-2">The QC Agent <span style="color:var(--cyan);">Checks Every Row</span></h2>
-  <p class="section-desc stagger-3" style="max-width:600px;">After jobs are ingested, a separate audit agent reviews the entire tracker. It fixes what it can and flags what needs attention.</p>
+  <h2 class="section-title stagger-2">The QC Agent <span style="color:var(--cyan);">Keeps the Board Clean</span></h2>
+  <p class="section-desc stagger-3" style="max-width:620px;">After every ingest cycle, an audit agent reviews every listing on the board. It corrects what it can on its own, escalates the rest, and never lets a bad listing sit there.</p>
   <div class="finance-layout stagger-4" style="max-width:1000px;margin-top:28px;">
     <div class="finance-card highlight">
-      <div class="f-label">Auto-Fix</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">Minor issues like missing rates, inconsistent formatting, or blank fields the system can fill in on its own. It corrects these without anyone asking.</div>
+      <div class="f-label">Auto Fix</div>
+      <div class="f-desc" style="font-size:15px;color:var(--t2);">Missing rates. Inconsistent formatting. Blank fields. Mis-tagged specialties. The agent corrects them in place. Nobody has to touch a thing.</div>
     </div>
     <div class="finance-card highlight">
-      <div class="f-label">Location Flags</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">Some platforms send the facility name in the location field instead of the city and state. The QC agent flags these rows so your team knows which ones need a quick location fix.</div>
+      <div class="f-label">Smart Location Resolution</div>
+      <div class="f-desc" style="font-size:15px;color:var(--t2);">Some upstream platforms send a facility name where a city should be. The QC Agent resolves these automatically from the facility data and updates the listing. Your team never sees it.</div>
     </div>
     <div class="finance-card highlight">
-      <div class="f-label">Missing Job IDs</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">Email-sourced jobs do not come with a platform job ID. The QC agent flags these rows as expected blanks so they are easy to spot and update if needed.</div>
+      <div class="f-label">Ask The Top Bot</div>
+      <div class="f-desc" style="font-size:15px;color:var(--t2);">For anything the QC Agent cannot resolve on its own, your team just asks The Top Bot in Slack. He pulls the right answer instantly. No digging, no waiting, no manual cleanup.</div>
     </div>
     <div class="finance-card highlight">
       <div class="f-label">Certification Result</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">88 jobs audited. 0 real errors. 86 of 88 had Job IDs (the two blanks were expected email jobs). 88 of 88 had complete job descriptions and Google Doc links.</div>
+      <div class="f-desc" style="font-size:15px;color:var(--t2);">88 jobs audited. 0 real errors. 0 duplicates. 88 of 88 published cleanly to the job board with full descriptions.</div>
     </div>
   </div>
 </div>
@@ -2169,11 +2169,11 @@ html, body {
     </div>
     <div class="engine-content">
       <span class="section-label stagger-2">Public Job Board</span>
-      <h2 class="section-title stagger-3">Every Job <span style="color:var(--cyan);">Live on the Web</span></h2>
+      <h2 class="section-title stagger-3">The Job Board Is <span style="color:var(--cyan);">The Product</span></h2>
       <ul class="engine-bullets stagger-4">
         <li>
           <div class="bullet-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-          <span><strong>Always current.</strong> The job board pulls directly from the Google Sheet. The moment a new job is ingested, it appears on the public site. No manual publishing.</span>
+          <span><strong>Always current.</strong> A job comes in, gets parsed, gets a description, and is posted to the board automatically. New listings appear within minutes. No manual publishing, ever.</span>
         </li>
         <li>
           <div class="bullet-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
@@ -2190,7 +2190,7 @@ html, body {
       </ul>
       <div class="impact-box stagger-5">
         <div class="impact-label">How it connects</div>
-        <div class="impact-text">The job board is the public face of Engine 1. The sourcing engine fills it. Physicians find it, read the description, and apply. Submissions go directly into the pipeline.</div>
+        <div class="impact-text">The job board is Engine 1's public face. The pipeline fills it. Physicians find it, read the role, and apply. Applications drop straight into the pipeline.</div>
       </div>
     </div>
   </div>
@@ -2208,7 +2208,7 @@ html, body {
     </div>
     <div class="finance-card highlight">
       <div class="f-label">Daily Ingest Report</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">A summary of what came in overnight. How many jobs from each source, how many descriptions were written, and the current total job count in the tracker. Sent every morning.</div>
+      <div class="f-desc" style="font-size:15px;color:var(--t2);">A summary of what came in overnight. How many jobs from each source, how many descriptions were written, and the current total of live listings on the job board. Sent every morning.</div>
     </div>
     <div class="finance-card highlight full-width">
       <div class="f-label">Error Handling</div>
@@ -2227,7 +2227,7 @@ html, body {
   <div class="finance-layout stagger-4" style="max-width:900px;margin-top:24px;">
     <div class="finance-card" style="border-color:rgba(201,169,110,0.2);background:rgba(201,169,110,0.03);">
       <div class="f-label" style="color:rgba(201,169,110,0.7);">Phase 1</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">Full wipe from zero. Tracker cleared. Then run end-to-end through all three sources.</div>
+      <div class="f-desc" style="font-size:15px;color:var(--t2);">Full wipe from zero. Board cleared. Then run end-to-end through all three sources.</div>
     </div>
     <div class="finance-card" style="border-color:rgba(201,169,110,0.2);background:rgba(201,169,110,0.03);">
       <div class="f-label" style="color:rgba(201,169,110,0.7);">Phase 2</div>
@@ -2235,7 +2235,7 @@ html, body {
     </div>
     <div class="finance-card" style="border-color:rgba(201,169,110,0.2);background:rgba(201,169,110,0.03);">
       <div class="f-label" style="color:rgba(201,169,110,0.7);">Phase 3</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">QC audit ran on all 88 rows. Zero real errors. 0 duplicates. 88 of 88 Google Doc links confirmed.</div>
+      <div class="f-desc" style="font-size:15px;color:var(--t2);">QC audit ran on all 88 listings. Zero real errors. 0 duplicates. 88 of 88 published cleanly to the live job board.</div>
     </div>
     <div class="finance-card" style="border-color:rgba(201,169,110,0.2);background:rgba(201,169,110,0.03);">
       <div class="f-label" style="color:rgba(201,169,110,0.7);">Phase 4</div>
@@ -2285,7 +2285,7 @@ html, body {
     </svg>
   </div>
   <h2 class="section-title stagger-2" style="font-size:clamp(40px,5vw,64px);">Engine 1 is <span style="color:var(--cyan);">Alive.</span></h2>
-  <p class="final-tagline stagger-3" style="max-width:600px;">Jobs flowing in. Descriptions written. Rates set. Tracker updated. Every day. Without anyone touching it.</p>
+  <p class="final-tagline stagger-3" style="max-width:600px;">Jobs flowing in. Descriptions written. Rates set. Posted to the board. Every day. Without anyone touching it.</p>
 </div>
 
 </div><!-- /deck -->
