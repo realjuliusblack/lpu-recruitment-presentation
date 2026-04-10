@@ -137,6 +137,8 @@ html, body {
   display: flex;
   align-items: center;
   gap: 0;
+  min-width: 90px;
+  justify-content: center;
 }
 
 .pipeline-icon {
@@ -176,11 +178,14 @@ html, body {
 
 .pipeline-label {
   position: absolute;
-  top: 52px;
-  font-size: 9px;
+  top: 46px;
+  font-size: 8px;
   font-weight: 600;
   color: var(--t3);
-  white-space: nowrap;
+  white-space: normal;
+  text-align: center;
+  width: 85px;
+  line-height: 1.2;
   letter-spacing: 0.3px;
   text-transform: uppercase;
   transition: color 0.5s ease;
@@ -192,8 +197,9 @@ html, body {
 .pipeline-icon.completed .pipeline-label { color: var(--cyan); }
 
 .pipeline-connector {
-  width: 40px;
+  width: 30px;
   height: 2px;
+  flex-shrink: 0;
   background: var(--border);
   transition: background 0.5s ease;
 }
@@ -1636,9 +1642,12 @@ html, body {
   }
 
   .pipeline-label {
-    font-size: 7px;
-    top: 38px;
+    font-size: 6px;
+    top: 36px;
     letter-spacing: 0;
+    width: 70px;
+    white-space: normal;
+    text-align: center;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -1860,8 +1869,11 @@ html, body {
     width: 16px;
   }
   .pipeline-label {
-    font-size: 6px;
-    top: 32px;
+    font-size: 5px;
+    top: 30px;
+    width: 55px;
+    white-space: normal;
+    text-align: center;
     left: 50%;
     transform: translateX(-50%);
   }
