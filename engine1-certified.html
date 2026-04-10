@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Locums United — Job Sourcing Engine: Black Label Certified</title>
+<title>Locums United: Agent 1 Job Sourcing. Black Label Certified.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -1913,6 +1913,232 @@ html, body {
     font-size: 9px;
   }
 }
+
+/* ═══════════════════════════════════════
+   PIPELINE FLOW VISUAL (Agent 1 rebuild)
+   ═══════════════════════════════════════ */
+.pipeline-flow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  max-width: 1180px;
+  width: 100%;
+  margin-top: 28px;
+}
+
+.pf-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pf-col-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 2px;
+}
+
+.pf-node {
+  background: var(--surface);
+  border: 1px solid var(--border-cyan);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.pf-node.full { grid-column: 1 / -1; }
+
+.pf-node::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--cyan);
+  border-radius: 3px 0 0 3px;
+}
+
+.pf-node-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.pf-node-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--t1);
+}
+
+.pf-node-badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--cyan);
+  background: var(--cyan-10);
+  border: 1px solid var(--border-cyan);
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.pf-node-desc {
+  font-size: 13px;
+  color: var(--t3);
+  line-height: 1.5;
+}
+
+.pf-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cyan);
+  font-size: 18px;
+  opacity: 0.5;
+}
+
+/* Agent 1 hero cert badge */
+.a1-cert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, rgba(0,204,255,0.15), rgba(0,204,255,0.05));
+  border: 1px solid var(--cyan-40);
+  color: var(--cyan);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 24px;
+}
+
+.a1-cert-badge svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--cyan);
+}
+
+/* In-dev tag */
+.indev-tag {
+  display: inline-block;
+  color: #c9a96e;
+  background: rgba(201,169,110,0.08);
+  border: 1px solid rgba(201,169,110,0.3);
+  padding: 5px 14px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+/* Job board screenshot block */
+.jobboard-block {
+  margin-top: 28px;
+  max-width: 900px;
+  width: 100%;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border-cyan);
+  text-align: center;
+}
+
+.jobboard-block .jb-mock {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 0 auto 16px;
+  max-width: 800px;
+}
+
+.jobboard-block .jb-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  text-align: left;
+}
+
+.jobboard-block .jb-spec {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.jobboard-block .jb-loc {
+  font-size: 13px;
+  color: var(--t2);
+  margin-bottom: 6px;
+}
+
+.jobboard-block .jb-rate {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--t1);
+}
+
+.jobboard-block .jb-link {
+  display: inline-block;
+  margin-top: 6px;
+  color: var(--cyan);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 10px 20px;
+  border: 1px solid var(--cyan-40);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.jobboard-block .jb-link:hover {
+  background: var(--cyan-10);
+}
+
+/* Black Label Certified hero badge */
+.bl-certified-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 22px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(201,169,110,0.15), rgba(201,169,110,0.03));
+  border: 1px solid rgba(201,169,110,0.4);
+  color: #d4b47a;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.bl-certified-wordmark svg {
+  width: 16px;
+  height: 16px;
+  fill: #d4b47a;
+}
+
+@media (max-width: 1100px) {
+  .pipeline-flow {
+    grid-template-columns: 1fr;
+  }
+  .jobboard-block .jb-mock {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 <body>
@@ -1966,7 +2192,7 @@ html, body {
   </div>
 </div>
 
-<!-- ENGINE 1 CERTIFIED — CLIENT UPDATE PRESENTATION -->
+<!-- AGENT 1 JOB SOURCING CERTIFIED — CLIENT UPDATE PRESENTATION -->
 <div class="deck" id="deck">
 
 <!-- SLIDE 0: COVER -->
@@ -1978,104 +2204,188 @@ html, body {
       <polygon fill="#fff" points="237.6,154.8 237.6,117.4 225.2,117.4 225.2,165.7 260.6,165.7 260.6,154.8"/>
     </svg>
   </div>
-  <h1 class="hero-title stagger-2">Job Sourcing Engine: <span style="color:var(--cyan);">Black Label Certified</span></h1>
-  <p class="hero-subtitle stagger-3">A full walkthrough of Engine 1. What it does, how it works, and why it passed.</p>
-  <p class="hero-subtitle stagger-4" style="margin-top:32px;font-size:15px;color:var(--t3);"><span class="nav-hint-desktop">Press <span style="color:var(--cyan);font-weight:600;">&#8594;</span> to explore</span><span class="nav-hint-mobile">Swipe to explore <span style="color:var(--cyan);font-weight:600;">&#8594;</span></span></p>
+  <h1 class="hero-title stagger-2">Agent 1: Job Sourcing <br><span class="cyan">is live.</span></h1>
+  <p class="hero-subtitle stagger-3">Agent 1 of 6. Seven engines certified. Zero errors. Runs without touch.</p>
+  <div class="bl-certified-wordmark stagger-4">
+    <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+    Black Label Certified · April 10, 2026
+  </div>
+  <p class="hero-subtitle stagger-5" style="margin-top:24px;font-size:14px;color:var(--t3);"><span class="nav-hint-desktop">Press <span style="color:var(--cyan);font-weight:600;">&#8594;</span> to walk through it</span><span class="nav-hint-mobile">Swipe to walk through it <span style="color:var(--cyan);font-weight:600;">&#8594;</span></span></p>
 </div>
-
 
 <!-- SLIDE 1: WHAT IT DOES -->
 <div class="slide" data-slide="1">
-  <span class="section-label stagger-1">Engine 1 Overview</span>
-  <h2 class="section-title stagger-2">What the Job Sourcing Engine <span style="color:var(--cyan);">Actually Does</span></h2>
-  <p class="section-desc stagger-3" style="max-width:600px;">Three jobs. Running every day. No one has to touch it.</p>
-  <div class="finance-layout stagger-4" style="max-width:900px;margin-top:32px;">
+  <span class="section-label stagger-1">What Agent 1 Does</span>
+  <h2 class="section-title stagger-2">Three jobs. <span class="cyan">Every day. No one touches it.</span></h2>
+  <p class="section-desc stagger-3" style="max-width:640px;">Agent 1 replaces the entire manual intake process. Find jobs, write them, publish them. All automatic.</p>
+  <div class="finance-layout stagger-4" style="max-width:1040px;margin-top:32px;grid-template-columns:repeat(3,1fr);">
     <div class="finance-card highlight">
       <div class="f-label">Job 1</div>
-      <div class="f-value" style="font-size:28px;">Finds Open Jobs</div>
-      <div class="f-desc">Scans two physician staffing platforms every day and picks up any jobs sent directly via email. New jobs come in automatically. Nothing gets missed.</div>
+      <div class="f-value" style="font-size:26px;">Finds Open Jobs</div>
+      <div class="f-desc">Scrapes LocumSmart. Polls LotusOne. Watches the inbox. New jobs surface within minutes of going live at the source.</div>
     </div>
     <div class="finance-card highlight">
       <div class="f-label">Job 2</div>
-      <div class="f-value" style="font-size:28px;">Writes Every Description</div>
-      <div class="f-desc">For every new job, an AI agent reads the raw data and writes a full, professional job description from scratch. Same tone, same format, every time.</div>
+      <div class="f-value" style="font-size:26px;">Writes Every JD</div>
+      <div class="f-desc">Claude reads the raw data and produces a professional, structured job description. Same tone, same format, every listing.</div>
     </div>
-    <div class="finance-card highlight full-width">
+    <div class="finance-card highlight">
       <div class="f-label">Job 3</div>
-      <div class="f-value" style="font-size:28px;">Posts to the Job Board</div>
-      <div class="f-desc">Every new job is published to your live, public job board the moment it is processed. Physicians see it within minutes. No manual posting. No formatting. No copy and paste.</div>
+      <div class="f-value" style="font-size:26px;">Publishes Live</div>
+      <div class="f-desc">Every finished listing is posted to the public job board within minutes. Searchable, filterable, ready to apply.</div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 2: THREE SOURCES -->
+<!-- SLIDE 2: THE PIPELINE -->
 <div class="slide" data-slide="2">
-  <span class="section-label stagger-1">How Jobs Get In</span>
-  <h2 class="section-title stagger-2">Three Ways Jobs <span style="color:var(--cyan);">Enter the System</span></h2>
-  <p class="section-desc stagger-3" style="max-width:580px;">Every channel is automated. New jobs flow in without anyone logging in or checking a portal.</p>
-  <div class="finance-layout stagger-4" style="max-width:1000px;margin-top:28px;">
-    <div class="finance-card highlight">
-      <div class="f-label">Source 1: LocumSmart</div>
-      <div class="f-value" style="font-size:22px;">Daily Scrape</div>
-      <div class="f-desc">A browser agent logs into the LocumSmart portal, navigates through every job listing, and pulls the full details on each one. This runs on a remote server so it is never tied to your computer or internet connection.</div>
+  <span class="section-label stagger-1">The Pipeline</span>
+  <h2 class="section-title stagger-2">Seven engines. <span class="cyan">One connected flow.</span></h2>
+  <p class="section-desc stagger-3" style="max-width:680px;font-size:16px;">Every engine inside Agent 1 is certified. Here is how they connect.</p>
+  <div class="pipeline-flow stagger-4">
+    <div class="pf-col">
+      <div class="pf-col-label">Sources</div>
+      <div class="pf-node">
+        <div class="pf-node-head">
+          <div class="pf-node-title">1. LocumSmart Ingest</div>
+          <span class="pf-node-badge">Certified</span>
+        </div>
+        <div class="pf-node-desc">Browser agent logs in, scrapes all open jobs daily.</div>
+      </div>
+      <div class="pf-node">
+        <div class="pf-node-head">
+          <div class="pf-node-title">2. LotusOne Ingest</div>
+          <span class="pf-node-badge">Certified</span>
+        </div>
+        <div class="pf-node-desc">API polling through Auth0, hourly check for new jobs.</div>
+      </div>
+      <div class="pf-node">
+        <div class="pf-node-head">
+          <div class="pf-node-title">3. Email Agent</div>
+          <span class="pf-node-badge">Certified</span>
+        </div>
+        <div class="pf-node-desc">Inbox monitor every 5 minutes. Text or PDF, both handled.</div>
+      </div>
     </div>
-    <div class="finance-card highlight">
-      <div class="f-label">Source 2: Aya / LotusOne</div>
-      <div class="f-value" style="font-size:22px;">Hourly Ingest</div>
-      <div class="f-desc">The system checks the Aya/LotusOne portal every hour. New jobs posted since the last check are automatically pulled in. You always have the most current listings from this platform.</div>
+    <div class="pf-col">
+      <div class="pf-col-label">Process</div>
+      <div class="pf-node">
+        <div class="pf-node-head">
+          <div class="pf-node-title">6. JD Engine</div>
+          <span class="pf-node-badge">Certified</span>
+        </div>
+        <div class="pf-node-desc">Normalizes data, generates job description, calculates rates, writes to sheet.</div>
+      </div>
+      <div class="pf-node">
+        <div class="pf-node-head">
+          <div class="pf-node-title">4. Sheet Quality Audit</div>
+          <span class="pf-node-badge">Certified</span>
+        </div>
+        <div class="pf-node-desc">Post-ingest audit catches missing fields, bad locations, format drift.</div>
+      </div>
+      <div class="pf-node">
+        <div class="pf-node-head">
+          <div class="pf-node-title">5. Stale Job Poller</div>
+          <span class="pf-node-badge">Certified</span>
+        </div>
+        <div class="pf-node-desc">Daily 7AM sweep. Removes closed jobs from the board. Never a dead listing.</div>
+      </div>
     </div>
-    <div class="finance-card highlight full-width">
-      <div class="f-label">Source 3: Direct Email</div>
-      <div class="f-value" style="font-size:22px;">Every 5 Minutes</div>
-      <div class="f-desc">Facilities and contacts can email jobs directly. Every five minutes the system checks the inbox. Whether the job arrives as a plain text email or a PDF attachment, it gets read, extracted, and posted to the job board automatically.</div>
+    <div class="pf-col">
+      <div class="pf-col-label">Output &amp; Monitor</div>
+      <div class="pf-node">
+        <div class="pf-node-head">
+          <div class="pf-node-title">Live Job Board</div>
+          <span class="pf-node-badge">Live</span>
+        </div>
+        <div class="pf-node-desc">Every clean listing published publicly. Filter by specialty, location, rate.</div>
+      </div>
+      <div class="pf-node">
+        <div class="pf-node-head">
+          <div class="pf-node-title">7. Daily Ingest Report</div>
+          <span class="pf-node-badge">Certified</span>
+        </div>
+        <div class="pf-node-desc">Every morning: what came in, what was written, what went live.</div>
+      </div>
+      <div class="pf-node">
+        <div class="pf-node-head">
+          <div class="pf-node-title">Error Handler</div>
+          <span class="pf-node-badge">Active</span>
+        </div>
+        <div class="pf-node-desc">Every failure is caught, logged, and routed. Nothing disappears silently.</div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 3: JD ENGINE -->
+<!-- SLIDE 3: HOW JOBS GET IN -->
 <div class="slide" data-slide="3">
+  <span class="section-label stagger-1">Sources</span>
+  <h2 class="section-title stagger-2">Three inputs. <span class="cyan">All automated.</span></h2>
+  <p class="section-desc stagger-3" style="max-width:600px;">No portal logins. No manual copy paste. Every channel runs without a human touching it.</p>
+  <div class="finance-layout stagger-4" style="max-width:1040px;margin-top:32px;grid-template-columns:repeat(3,1fr);">
+    <div class="finance-card highlight">
+      <div class="f-label">LocumSmart</div>
+      <div class="f-value" style="font-size:22px;">Daily Scrape</div>
+      <div class="f-desc">A browser agent logs into the portal, walks every listing, and pulls full details. Runs on a remote server. 69 jobs pulled in the cert run.</div>
+    </div>
+    <div class="finance-card highlight">
+      <div class="f-label">LotusOne / Aya</div>
+      <div class="f-value" style="font-size:22px;">Hourly Poll</div>
+      <div class="f-desc">API pull through the LotusOne auth layer. Checks for new listings every hour. 7 jobs pulled in the cert run.</div>
+    </div>
+    <div class="finance-card highlight">
+      <div class="f-label">Direct Email</div>
+      <div class="f-value" style="font-size:22px;">Every 5 Min</div>
+      <div class="f-desc">Facilities send jobs to a dedicated inbox. Plain text or PDF attachment, both handled. Held for Ali's Slack approval before publishing.</div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4: STALE JOB POLLER -->
+<div class="slide" data-slide="4">
   <div class="engine-layout">
     <div class="engine-visual stagger-1">
-      <div class="engine-number">3</div>
+      <div class="engine-number">5</div>
       <div class="engine-ring">
-        <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
       </div>
     </div>
     <div class="engine-content">
-      <span class="section-label stagger-2">Job Description Engine</span>
-      <h2 class="section-title stagger-3">Every Job Gets a <span style="color:var(--cyan);">Real Description</span></h2>
+      <span class="section-label stagger-2">Stale Job Poller</span>
+      <h2 class="section-title stagger-3">Dead jobs <span class="cyan">get removed.</span></h2>
       <ul class="engine-bullets stagger-4">
         <li>
           <div class="bullet-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-          <span><strong>Raw data in.</strong> The system receives the job details: specialty, location, facility, pay rate, dates, and requirements.</span>
+          <span><strong>Runs daily at 7 AM.</strong> Walks every live listing on the board and checks it against the source API.</span>
         </li>
         <li>
           <div class="bullet-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-          <span><strong>AI writes the description.</strong> Claude reads all the data and produces a structured, professional job description. Tone and format are consistent across every single listing.</span>
+          <span><strong>69 of 69 LocumSmart verified.</strong> Full coverage in the cert run. Zero errors. Zero false removals.</span>
         </li>
         <li>
           <div class="bullet-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-          <span><strong>Consistent, professional copy.</strong> Every description follows the same structure: role, location, schedule, requirements, pay. No matter the source, the output looks like it came from one team.</span>
+          <span><strong>Rate limit safe.</strong> Built-in 90 second cooldown between check waves. No 429s. No dropped jobs.</span>
         </li>
         <li>
           <div class="bullet-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-          <span><strong>Posted to the job board.</strong> The finished listing goes live on the public board automatically. Searchable, filterable, and ready for physicians to apply.</span>
+          <span><strong>Email jobs protected.</strong> Jobs from direct email are never auto-expired. Flagged to Tyson for manual review after 30 days.</span>
         </li>
       </ul>
       <div class="impact-box stagger-5">
-        <div class="impact-label">Result</div>
-        <div class="impact-text">Every job that comes in leaves the pipeline as a live, publish-ready listing on the job board. No manual writing. No formatting. No posting.</div>
+        <div class="impact-label">Why this matters</div>
+        <div class="impact-text">Your job board never shows a role that has already closed. Physicians never apply to a dead listing. No one has to remember to clean the board.</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 4: RATE ENGINE -->
-<div class="slide" data-slide="4">
+<!-- SLIDE 5: RATE ENGINE (IN DEV) -->
+<div class="slide" data-slide="5">
   <span class="section-label stagger-1">Rate Engine</span>
-  <h2 class="section-title stagger-2">Rates Set by Math. <span style="color:var(--cyan);">Not Pulled from Air.</span></h2>
-  <p class="stagger-3" style="display:inline-block;color:#c9a96e;background:rgba(201,169,110,0.08);border:1px solid rgba(201,169,110,0.3);padding:4px 12px;border-radius:4px;font-weight:700;font-size:10px;letter-spacing:1.4px;text-transform:uppercase;margin-top:2px;margin-bottom:10px;">In Development / Awaiting Methodology from Ahmed</p>
-  <p class="section-desc stagger-4" style="max-width:680px;font-size:15px;">The brain that sets every bill rate and pay rate. Four methods, one engine, zero guesswork.</p>
+  <h2 class="section-title stagger-2">Rates set by math. <span class="cyan">Not pulled from air.</span></h2>
+  <p class="stagger-3 indev-tag" style="margin-top:12px;">In Development · Awaiting Methodology Session with Ahmed</p>
+  <p class="section-desc stagger-4" style="max-width:700px;font-size:15px;margin-top:14px;">The rate calculator sits inside the JD Engine. The four methods are scaffolded. Final logic locks once Ahmed's session happens.</p>
   <div class="finance-layout stagger-5" style="max-width:1040px;margin-top:18px;grid-template-columns:1fr 1fr;gap:14px;">
     <div class="finance-card highlight" style="padding:18px 20px;">
       <div class="f-label">1. Margin-Based</div>
@@ -2096,188 +2406,83 @@ html, body {
   </div>
 </div>
 
-<!-- SLIDE 5: EMAIL AGENT -->
-<div class="slide" data-slide="5">
-  <div class="engine-layout">
-    <div class="engine-visual stagger-1">
-      <div class="engine-number">5</div>
-      <div class="engine-ring">
-        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-      </div>
-    </div>
-    <div class="engine-content">
-      <span class="section-label stagger-2">Direct Email Ingest</span>
-      <h2 class="section-title stagger-3">Jobs Sent by Email <span style="color:var(--cyan);">Are Handled Automatically</span></h2>
-      <ul class="engine-bullets stagger-4">
-        <li>
-          <div class="bullet-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-          <span><strong>Inbox checked every 5 minutes.</strong> The system monitors a dedicated inbox. Any new email with a job in it gets processed immediately.</span>
-        </li>
-        <li>
-          <div class="bullet-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-          <span><strong>Plain text or PDF.</strong> It does not matter how the job arrives. The agent reads plain text email bodies and PDF attachments with equal accuracy.</span>
-        </li>
-        <li>
-          <div class="bullet-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-          <span><strong>AI extracts the details.</strong> Specialty, location, pay rate, dates, and requirements are pulled from the email. No template required on the sender's end.</span>
-        </li>
-        <li>
-          <div class="bullet-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-          <span><strong>Same pipeline as every other job.</strong> Email jobs run through the JD Engine and land on the job board exactly like the scraped ones. The sender does not have to format anything.</span>
-        </li>
-      </ul>
-      <div class="impact-box stagger-5">
-        <div class="impact-label">Tested and confirmed</div>
-        <div class="impact-text">Two email jobs were processed in the certification test. Tulsa, OK Emergency Medicine ($350/hr) arrived as plain text. Portland, OR Hospitalist ($400/hr) arrived as a PDF. Both landed on the job board correctly.</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SLIDE 6: QC AUDIT AGENT -->
+<!-- SLIDE 6: CERTIFICATION RESULTS -->
 <div class="slide" data-slide="6">
-  <span class="section-label stagger-1">Quality Control</span>
-  <h2 class="section-title stagger-2">The QC Agent <span style="color:var(--cyan);">Keeps the Board Clean</span></h2>
-  <p class="section-desc stagger-3" style="max-width:620px;">After every ingest cycle, an audit agent reviews every listing on the board. It corrects what it can on its own, escalates the rest, and never lets a bad listing sit there.</p>
-  <div class="finance-layout stagger-4" style="max-width:1000px;margin-top:28px;">
-    <div class="finance-card highlight">
-      <div class="f-label">Auto Fix</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">Missing rates. Inconsistent formatting. Blank fields. Mis-tagged specialties. The agent corrects them in place. Nobody has to touch a thing.</div>
+  <span class="section-label stagger-1">Cert Results</span>
+  <h2 class="section-title stagger-2">76 jobs. <span class="cyan">Zero errors. Zero duplicates.</span></h2>
+  <p class="section-desc stagger-3" style="max-width:640px;">End-to-end run from a wiped sheet. Every source, every engine, every listing. This is the number that passed.</p>
+  <div class="numbers-grid stagger-4" style="grid-template-columns:repeat(4,1fr);max-width:1040px;">
+    <div class="number-card">
+      <div class="number-value"><span class="counter" data-target="76">76</span></div>
+      <div class="number-desc">Total jobs ingested</div>
     </div>
-    <div class="finance-card highlight">
-      <div class="f-label">Smart Location Resolution</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">Some upstream platforms send a facility name where a city should be. The QC Agent resolves these automatically from the facility data and updates the listing. Your team never sees it.</div>
+    <div class="number-card">
+      <div class="number-value"><span class="counter" data-target="69">69</span><span class="number-unit"> + 7</span></div>
+      <div class="number-desc">LocumSmart + LotusOne</div>
     </div>
-    <div class="finance-card highlight">
-      <div class="f-label">Ask The Top Bot</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">For anything the QC Agent cannot resolve on its own, your team just asks The Top Bot in Slack. He pulls the right answer instantly. No digging, no waiting, no manual cleanup.</div>
+    <div class="number-card">
+      <div class="number-value"><span class="counter" data-target="100">100</span><span class="number-unit">%</span></div>
+      <div class="number-desc">JD and rate coverage</div>
     </div>
-    <div class="finance-card highlight">
-      <div class="f-label">Certification Result</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">76 jobs audited. 0 real errors. 0 duplicates. 76 of 76 published cleanly to the job board with full descriptions.</div>
+    <div class="number-card">
+      <div class="number-value" data-display="ZERO">0</div>
+      <div class="number-desc">Errors and duplicates</div>
     </div>
+  </div>
+  <div class="jobboard-block stagger-5">
+    <div class="jb-mock">
+      <div class="jb-card">
+        <div class="jb-spec">CRNA</div>
+        <div class="jb-loc">Minneapolis, MN</div>
+        <div class="jb-rate">$202/hr</div>
+      </div>
+      <div class="jb-card">
+        <div class="jb-spec">Electrophysiology</div>
+        <div class="jb-loc">Flagstaff, AZ</div>
+        <div class="jb-rate">$428/hr</div>
+      </div>
+      <div class="jb-card">
+        <div class="jb-spec">Anesthesiology</div>
+        <div class="jb-loc">Burlingame, CA</div>
+        <div class="jb-rate">$360/hr</div>
+      </div>
+    </div>
+    <a class="jb-link" href="https://locumsunited.com/jobs" target="_blank" rel="noopener">Open the live job board &#8594;</a>
   </div>
 </div>
 
-<!-- SLIDE 7: JOB BOARD -->
+<!-- SLIDE 7: WHAT'S NEXT -->
 <div class="slide" data-slide="7">
-  <div class="engine-layout">
-    <div class="engine-visual stagger-1">
-      <div class="engine-number">7</div>
-      <div class="engine-ring">
-        <svg viewBox="0 0 24 24"><path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/></svg>
-      </div>
-    </div>
-    <div class="engine-content">
-      <span class="section-label stagger-2">Public Job Board</span>
-      <h2 class="section-title stagger-3">The Job Board Is <span style="color:var(--cyan);">The Product</span></h2>
-      <ul class="engine-bullets stagger-4">
-        <li>
-          <div class="bullet-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-          <span><strong>Always current.</strong> A job comes in, gets parsed, gets a description, and is posted to the board automatically. New listings appear within minutes. No manual publishing, ever.</span>
-        </li>
-        <li>
-          <div class="bullet-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-          <span><strong>Search and filter.</strong> Physicians can search by keyword or filter by specialty. The board shows open role count, specialty count, and states covered in real time.</span>
-        </li>
-        <li>
-          <div class="bullet-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-          <span><strong>Full job descriptions.</strong> Every listing links to the AI-written description. Physicians see the full role details before they apply.</span>
-        </li>
-        <li>
-          <div class="bullet-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-          <span><strong>Built-in application form.</strong> Each job has an apply page. Physicians submit their specialty, credentials, licenses, availability, CV, and references in one form.</span>
-        </li>
-      </ul>
-      <div class="impact-box stagger-5">
-        <div class="impact-label">How it connects</div>
-        <div class="impact-text">The job board is Engine 1's public face. The pipeline fills it. Physicians find it, read the role, and apply. Applications drop straight into the pipeline.</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SLIDE 8: HEALTH CHECK AND REPORTING -->
-<div class="slide" data-slide="8">
-  <span class="section-label stagger-1">Daily Monitoring</span>
-  <h2 class="section-title stagger-2">The System Reports <span style="color:var(--cyan);">Every Day</span></h2>
-  <p class="section-desc stagger-3" style="max-width:600px;">You should never have to wonder if the engine is running. Three daily outputs keep the whole picture visible.</p>
-  <div class="finance-layout stagger-4" style="max-width:1000px;margin-top:28px;">
-    <div class="finance-card highlight">
-      <div class="f-label">Daily Health Check</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">Every morning, the system runs a self-check. It verifies that all workflows are active, all connections are live, and nothing has failed silently overnight. If something is wrong, it flags it.</div>
-    </div>
-    <div class="finance-card highlight">
-      <div class="f-label">Daily Ingest Report</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">A summary of what came in overnight. How many jobs from each source, how many descriptions were written, and the current total of live listings on the job board. Sent every morning.</div>
-    </div>
-    <div class="finance-card highlight full-width">
-      <div class="f-label">Error Handling</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">If any step in the pipeline fails (a scrape error, a bad email, a platform timeout), the error is caught, logged, and routed to a dedicated error handler. Nothing disappears silently. Every failure leaves a record.</div>
-    </div>
-  </div>
-</div>
-
-<!-- SLIDE 9: BLACK LABEL S-TIER CERTIFIED -->
-<div class="slide bl-cert-slide" data-slide="9">
-  <div class="bl-seal stagger-1">
-    <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-  </div>
-  <h2 class="section-title stagger-2" style="margin-top:28px;font-size:clamp(32px,4vw,52px);">Black Label <span class="bl-gold">S-TIER Certified</span></h2>
-  <p class="section-desc stagger-3" style="max-width:620px;font-size:16px;">Certification is not given for partial completion. Every test is run from zero on a real production system. If anything fails, the system does not pass. Engine 1 passed.</p>
-  <div class="finance-layout stagger-4" style="max-width:900px;margin-top:24px;">
-    <div class="finance-card" style="border-color:rgba(201,169,110,0.2);background:rgba(201,169,110,0.03);">
-      <div class="f-label" style="color:rgba(201,169,110,0.7);">Phase 1</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">Full wipe from zero. Board cleared. Then run end-to-end through all three sources.</div>
-    </div>
-    <div class="finance-card" style="border-color:rgba(201,169,110,0.2);background:rgba(201,169,110,0.03);">
-      <div class="f-label" style="color:rgba(201,169,110,0.7);">Phase 2</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">76 jobs ingested. 7 LotusOne + 69 LocumSmart. All descriptions generated. All rates calculated.</div>
-    </div>
-    <div class="finance-card" style="border-color:rgba(201,169,110,0.2);background:rgba(201,169,110,0.03);">
-      <div class="f-label" style="color:rgba(201,169,110,0.7);">Phase 3</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">QC audit ran on all 76 listings. Zero real errors. 0 duplicates. 76 of 76 published cleanly to the live job board.</div>
-    </div>
-    <div class="finance-card" style="border-color:rgba(201,169,110,0.2);background:rgba(201,169,110,0.03);">
-      <div class="f-label" style="color:rgba(201,169,110,0.7);">Phase 4</div>
-      <div class="f-desc" style="font-size:15px;color:var(--t2);">All bugs from the certification process were resolved before the pass was granted. The system you see now is the certified version.</div>
-    </div>
-  </div>
-</div>
-
-<!-- SLIDE 10: WHAT'S NEXT -->
-<div class="slide" data-slide="10">
   <span class="section-label stagger-1">What's Next</span>
-  <h2 class="section-title stagger-2">Engine 1 is Live. <span style="color:var(--cyan);">Here's What Follows.</span></h2>
-  <p class="section-desc stagger-3" style="max-width:600px;">The job sourcing engine runs in the background every day. The next phases build the physician side of the operation.</p>
-  <div class="next-agents stagger-4">
-    <div class="next-agent-card" style="border-color:var(--cyan-25);">
-      <div class="na-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-      </div>
-      <h3>Engine 1</h3>
-      <p style="color:var(--cyan);font-weight:600;font-size:13px;margin-bottom:6px;">LIVE</p>
-      <p>Job Sourcing. Runs daily across all three channels. Black Label Certified.</p>
+  <h2 class="section-title stagger-2">Agent 2: <span class="cyan">Physician Finder.</span></h2>
+  <p class="section-desc stagger-3" style="max-width:680px;">Agent 1 fills the board with jobs. Agent 2 finds the physicians to fill those jobs. First Anthropic Managed Agent pilot inside LPU.</p>
+  <div class="finance-layout stagger-4" style="max-width:1080px;margin-top:28px;grid-template-columns:1fr 1fr;">
+    <div class="finance-card highlight">
+      <div class="f-label">Data Sources</div>
+      <div class="f-value" style="font-size:22px;">Heartbeat.ai + Doximity</div>
+      <div class="f-desc">Physician data pulled from verified networks. Specialty, location, state licensure, contact info.</div>
     </div>
-    <div class="next-agent-card">
-      <div class="na-icon">
-        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-      </div>
-      <h3>Engine 2</h3>
-      <p>AI Physician Finder. Sourcing, outreach, and candidate pipeline. Next in build.</p>
+    <div class="finance-card highlight">
+      <div class="f-label">Matching</div>
+      <div class="f-value" style="font-size:22px;">4-Axis Fit Score</div>
+      <div class="f-desc">Specialty match. Location match. Availability. Rate alignment. Every open job gets ranked candidates.</div>
     </div>
-    <div class="next-agent-card">
-      <div class="na-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-      </div>
-      <h3>Engines 3-6</h3>
-      <p>Qualification. Name Clear. Background Check. Facility Presentation. Each one follows in sequence.</p>
+    <div class="finance-card highlight">
+      <div class="f-label">Outreach</div>
+      <div class="f-value" style="font-size:22px;">Segmented Campaigns</div>
+      <div class="f-desc">Multi-channel delivery. Email, SMS, and DMs. Campaigns segmented by specialty and geography.</div>
+    </div>
+    <div class="finance-card highlight">
+      <div class="f-label">Paid Acquisition</div>
+      <div class="f-value" style="font-size:22px;">Meta &amp; Social Ads</div>
+      <div class="f-desc">Automated ad spend against physician lookalike audiences. Inbound applications route back to Agent 3 for qualification.</div>
     </div>
   </div>
+  <p class="section-desc stagger-5" style="max-width:720px;font-size:14px;margin-top:24px;color:var(--t3);">After Agent 2: Qualification (3), Name Clear (4), Background Check (5), Facility Presentation (6). All six agents form the full recruiter.</p>
 </div>
 
-<!-- SLIDE 11: CLOSING -->
-<div class="slide" data-slide="11">
+<!-- SLIDE 8: CLOSING -->
+<div class="slide" data-slide="8">
   <div class="logo-container stagger-1">
     <svg viewBox="0 0 822 283.5" style="height:60px;width:auto;">
       <path fill="#00CCFF" d="M78.1,142l-15.3-14.6L22.2,142l40.6,14.6L78.1,142z M131.8,142l15.3-14.6l40.6,14.6l-40.6,14.6L131.8,142z M86.3,122.6l-0.5-21.2l-39-18.4l18.4,39L86.3,122.6z M124.5,122.6l0.5-21.2l39-18.4l-18.4,39L124.5,122.6z M86.3,160.9l-0.5,21.2l-39,18.4l18.4-39L86.3,160.9z M124.5,160.9l0.5,21.2l39,18.4l-18.4-39L124.5,160.9z M105.2,168.7l14.6,15.3l-14.6,40.6L90.6,184L105.2,168.7z M105.2,114.8l14.6-15.3l-14.6-40.6L90.6,99.5L105.2,114.8z"/>
@@ -2285,11 +2490,16 @@ html, body {
       <polygon fill="#fff" points="237.6,154.8 237.6,117.4 225.2,117.4 225.2,165.7 260.6,165.7 260.6,154.8"/>
     </svg>
   </div>
-  <h2 class="section-title stagger-2" style="font-size:clamp(40px,5vw,64px);">Engine 1 is <span style="color:var(--cyan);">Alive.</span></h2>
-  <p class="final-tagline stagger-3" style="max-width:600px;">Jobs flowing in. Descriptions written. Rates set. Posted to the board. Every day. Without anyone touching it.</p>
+  <h2 class="section-title stagger-2" style="font-size:clamp(40px,5vw,64px);margin-top:24px;">Agent 1 is <span class="cyan">live.</span></h2>
+  <p class="final-tagline stagger-3" style="max-width:620px;">Jobs flowing in. Descriptions written. Board updated. Dead listings removed. Every day. Without anyone touching it.</p>
+  <div class="bl-certified-wordmark stagger-4" style="margin-top:32px;">
+    <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+    Black Label Certified · Agent 1 of 6
+  </div>
 </div>
 
 </div><!-- /deck -->
+
 
 <!-- NAVIGATION -->
 <div class="nav-dots" id="navDots"></div>
