@@ -1644,7 +1644,7 @@ html, body {
   }
 
   /* Job board slide browser mockup — smaller */
-  [data-slide="4"] .engine-visual {
+  [data-slide="3"] .engine-visual {
     flex: 0 0 auto;
     height: auto;
     width: 100%;
@@ -1652,7 +1652,7 @@ html, body {
     margin: 0 auto;
   }
 
-  [data-slide="4"] .engine-visual > div {
+  [data-slide="3"] .engine-visual > div {
     width: 100% !important;
     max-width: 300px;
   }
@@ -1717,10 +1717,10 @@ html, body {
   .problem-card p { font-size: 11px; }
 
   /* Slide 3 (Job Board): hide mockup on mobile, show bullets only */
-  [data-slide="4"] .engine-visual {
+  [data-slide="3"] .engine-visual {
     display: none !important;
   }
-  [data-slide="4"] .engine-layout {
+  [data-slide="3"] .engine-layout {
     margin-top: 20px !important;
   }
 
@@ -2261,7 +2261,7 @@ html, body {
       </div>
       <div class="pf-node">
         <div class="pf-node-head">
-          <div class="pf-node-title">3. Email Agent</div>
+          <div class="pf-node-title">3. Email Ingest</div>
           <span class="pf-node-badge">Certified</span>
         </div>
         <div class="pf-node-desc">Inbox monitor every 5 minutes. Text or PDF, both handled.</div>
@@ -2318,35 +2318,11 @@ html, body {
   </div>
 </div>
 
-<!-- SLIDE 3: HOW JOBS GET IN -->
+<!-- SLIDE 3: STALE JOB POLLER -->
 <div class="slide" data-slide="3">
-  <span class="section-label stagger-1">Sources</span>
-  <h2 class="section-title stagger-2">Three inputs. <span class="cyan">All automated.</span></h2>
-  <p class="section-desc stagger-3" style="max-width:600px;">No portal logins. No manual copy paste. Every channel runs without a human touching it.</p>
-  <div class="finance-layout stagger-4" style="max-width:1040px;margin-top:32px;grid-template-columns:repeat(3,1fr);">
-    <div class="finance-card highlight">
-      <div class="f-label">LocumSmart</div>
-      <div class="f-value" style="font-size:22px;">REST API</div>
-      <div class="f-desc">Direct API integration. New assignments push to us, we pull the full record, it lands on the board in minutes. 69 jobs pulled in the cert run.</div>
-    </div>
-    <div class="finance-card highlight">
-      <div class="f-label">LotusOne / Aya</div>
-      <div class="f-value" style="font-size:22px;">REST API</div>
-      <div class="f-desc">Direct API integration. Daily schedule plus on-demand pull. Every new open listing picked up without a login. 7 jobs pulled in the cert run.</div>
-    </div>
-    <div class="finance-card highlight">
-      <div class="f-label">Direct Email</div>
-      <div class="f-value" style="font-size:22px;">Every 5 Min</div>
-      <div class="f-desc">Facilities send jobs to a dedicated inbox. Plain text or PDF attachment, both handled. Held for Ali's Slack approval before publishing.</div>
-    </div>
-  </div>
-</div>
-
-<!-- SLIDE 4: STALE JOB POLLER -->
-<div class="slide" data-slide="4">
   <div class="engine-layout">
     <div class="engine-visual stagger-1">
-      <div class="engine-number">5</div>
+      <div class="engine-number">6</div>
       <div class="engine-ring">
         <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
       </div>
@@ -2381,7 +2357,7 @@ html, body {
 </div>
 
 <!-- SLIDE 5: RATE ENGINE (IN DEV) -->
-<div class="slide" data-slide="5">
+<div class="slide" data-slide="4">
   <span class="section-label stagger-1">Rate Engine</span>
   <h2 class="section-title stagger-2">Rates set by math. <span class="cyan">Not pulled from air.</span></h2>
   <p class="stagger-3 indev-tag" style="margin-top:12px;">In Development · Awaiting Methodology Session with Ahmed</p>
@@ -2401,13 +2377,13 @@ html, body {
     </div>
     <div class="finance-card highlight" style="padding:18px 20px;">
       <div class="f-label">4. Geographic Adjustment</div>
-      <div class="f-desc" style="font-size:14px;color:var(--t2);line-height:1.5;">Every rate shifted for where the job lives. High cost markets lifted. Rural markets adjusted down.</div>
+      <div class="f-desc" style="font-size:14px;color:var(--t2);line-height:1.5;">Every rate shifted for where the job lives. High cost markets lifted. Rural and hard to fill markets lifted further.</div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 6: CERTIFICATION RESULTS -->
-<div class="slide" data-slide="6">
+<!-- SLIDE 5: CERTIFICATION RESULTS -->
+<div class="slide" data-slide="5">
   <span class="section-label stagger-1">Cert Results</span>
   <h2 class="section-title stagger-2">76 jobs. <span class="cyan">Zero errors. Zero duplicates.</span></h2>
   <p class="section-desc stagger-3" style="max-width:640px;">End-to-end run from a wiped sheet. Every source, every engine, every listing. This is the number that passed.</p>
@@ -2451,8 +2427,8 @@ html, body {
   </div>
 </div>
 
-<!-- SLIDE 7: WHAT'S NEXT -->
-<div class="slide" data-slide="7">
+<!-- SLIDE 6: WHAT'S NEXT -->
+<div class="slide" data-slide="6">
   <span class="section-label stagger-1">What's Next</span>
   <h2 class="section-title stagger-2">Agent 2: <span class="cyan">Physician Finder.</span></h2>
   <p class="section-desc stagger-3" style="max-width:680px;">Agent 1 fills the board with jobs. Agent 2 finds the physicians to fill those jobs. First Anthropic Managed Agent pilot inside LPU.</p>
@@ -2481,8 +2457,8 @@ html, body {
   <p class="section-desc stagger-5" style="max-width:720px;font-size:14px;margin-top:24px;color:var(--t3);">After Agent 2: Qualification (3), Name Clear (4), Background Check (5), Facility Presentation (6). All six agents form the full recruiter.</p>
 </div>
 
-<!-- SLIDE 8: CLOSING -->
-<div class="slide" data-slide="8">
+<!-- SLIDE 7: CLOSING -->
+<div class="slide" data-slide="7">
   <div class="logo-container stagger-1">
     <svg viewBox="0 0 822 283.5" style="height:60px;width:auto;">
       <path fill="#00CCFF" d="M78.1,142l-15.3-14.6L22.2,142l40.6,14.6L78.1,142z M131.8,142l15.3-14.6l40.6,14.6l-40.6,14.6L131.8,142z M86.3,122.6l-0.5-21.2l-39-18.4l18.4,39L86.3,122.6z M124.5,122.6l0.5-21.2l39-18.4l-18.4,39L124.5,122.6z M86.3,160.9l-0.5,21.2l-39,18.4l18.4-39L86.3,160.9z M124.5,160.9l0.5,21.2l39,18.4l-18.4-39L124.5,160.9z M105.2,168.7l14.6,15.3l-14.6,40.6L90.6,184L105.2,168.7z M105.2,114.8l14.6-15.3l-14.6-40.6L90.6,99.5L105.2,114.8z"/>
