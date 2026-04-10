@@ -2222,7 +2222,7 @@ html, body {
     <div class="finance-card highlight">
       <div class="f-label">Step 01</div>
       <div class="f-value" style="font-size:26px;">Find</div>
-      <div class="f-desc">Scrapes LocumSmart. Polls LotusOne. Watches the inbox. New open roles surface within minutes of going live at the source.</div>
+      <div class="f-desc">Pulls from LocumSmart and LotusOne over REST API. Watches the inbox for direct email. New open roles surface within minutes of going live at the source.</div>
     </div>
     <div class="finance-card highlight">
       <div class="f-label">Step 02</div>
@@ -2250,14 +2250,14 @@ html, body {
           <div class="pf-node-title">1. LocumSmart Ingest</div>
           <span class="pf-node-badge">Certified</span>
         </div>
-        <div class="pf-node-desc">Browser agent logs in, scrapes all open jobs daily.</div>
+        <div class="pf-node-desc">Direct REST API integration. Webhook-triggered on new assignments.</div>
       </div>
       <div class="pf-node">
         <div class="pf-node-head">
           <div class="pf-node-title">2. LotusOne Ingest</div>
           <span class="pf-node-badge">Certified</span>
         </div>
-        <div class="pf-node-desc">API polling through Auth0, hourly check for new jobs.</div>
+        <div class="pf-node-desc">Direct REST API integration. Daily schedule plus on-demand trigger.</div>
       </div>
       <div class="pf-node">
         <div class="pf-node-head">
@@ -2271,21 +2271,21 @@ html, body {
       <div class="pf-col-label">Process</div>
       <div class="pf-node">
         <div class="pf-node-head">
-          <div class="pf-node-title">6. JD Engine</div>
+          <div class="pf-node-title">4. JD Engine</div>
           <span class="pf-node-badge">Certified</span>
         </div>
         <div class="pf-node-desc">Normalizes data, generates job description, calculates rates, writes to sheet.</div>
       </div>
       <div class="pf-node">
         <div class="pf-node-head">
-          <div class="pf-node-title">4. Sheet Quality Audit</div>
+          <div class="pf-node-title">5. Sheet Quality Audit</div>
           <span class="pf-node-badge">Certified</span>
         </div>
         <div class="pf-node-desc">Post-ingest audit catches missing fields, bad locations, format drift.</div>
       </div>
       <div class="pf-node">
         <div class="pf-node-head">
-          <div class="pf-node-title">5. Stale Job Poller</div>
+          <div class="pf-node-title">6. Stale Job Poller</div>
           <span class="pf-node-badge">Certified</span>
         </div>
         <div class="pf-node-desc">Daily 7AM sweep. Removes closed jobs from the board. Never a dead listing.</div>
@@ -2302,7 +2302,7 @@ html, body {
       </div>
       <div class="pf-node">
         <div class="pf-node-head">
-          <div class="pf-node-title">7. Daily Ingest Report</div>
+          <div class="pf-node-title">7. Daily Health Report</div>
           <span class="pf-node-badge">Certified</span>
         </div>
         <div class="pf-node-desc">Every morning: what came in, what was written, what went live.</div>
@@ -2326,13 +2326,13 @@ html, body {
   <div class="finance-layout stagger-4" style="max-width:1040px;margin-top:32px;grid-template-columns:repeat(3,1fr);">
     <div class="finance-card highlight">
       <div class="f-label">LocumSmart</div>
-      <div class="f-value" style="font-size:22px;">Daily Scrape</div>
-      <div class="f-desc">A browser agent logs into the portal, walks every listing, and pulls full details. Runs on a remote server. 69 jobs pulled in the cert run.</div>
+      <div class="f-value" style="font-size:22px;">REST API</div>
+      <div class="f-desc">Direct API integration. New assignments push to us, we pull the full record, it lands on the board in minutes. 69 jobs pulled in the cert run.</div>
     </div>
     <div class="finance-card highlight">
       <div class="f-label">LotusOne / Aya</div>
-      <div class="f-value" style="font-size:22px;">Hourly Poll</div>
-      <div class="f-desc">API pull through the LotusOne auth layer. Checks for new listings every hour. 7 jobs pulled in the cert run.</div>
+      <div class="f-value" style="font-size:22px;">REST API</div>
+      <div class="f-desc">Direct API integration. Daily schedule plus on-demand pull. Every new open listing picked up without a login. 7 jobs pulled in the cert run.</div>
     </div>
     <div class="finance-card highlight">
       <div class="f-label">Direct Email</div>
@@ -2389,7 +2389,7 @@ html, body {
   <div class="finance-layout stagger-5" style="max-width:1040px;margin-top:18px;grid-template-columns:1fr 1fr;gap:14px;">
     <div class="finance-card highlight" style="padding:18px 20px;">
       <div class="f-label">1. Margin-Based</div>
-      <div class="f-desc" style="font-size:14px;color:var(--t2);line-height:1.5;">Bill rate in, specialty margin applied, pay rate out. A $300/hr EM job at 22% returns $234/hr.</div>
+      <div class="f-desc" style="font-size:14px;color:var(--t2);line-height:1.5;">Bill rate in, specialty margin applied, pay rate out. The default when the source provides a rate.</div>
     </div>
     <div class="finance-card highlight" style="padding:18px 20px;">
       <div class="f-label">2. Historical Projection</div>
@@ -2397,11 +2397,11 @@ html, body {
     </div>
     <div class="finance-card highlight" style="padding:18px 20px;">
       <div class="f-label">3. National Benchmarks</div>
-      <div class="f-desc" style="font-size:14px;color:var(--t2);line-height:1.5;">Thin history? Fall back to MGMA and Merritt Hawkins surveys. The same benchmarks hospital CFOs use.</div>
+      <div class="f-desc" style="font-size:14px;color:var(--t2);line-height:1.5;">Thin history? Fall back to published industry compensation surveys. The same benchmarks hospital CFOs use.</div>
     </div>
     <div class="finance-card highlight" style="padding:18px 20px;">
       <div class="f-label">4. Geographic Adjustment</div>
-      <div class="f-desc" style="font-size:14px;color:var(--t2);line-height:1.5;">Every rate shifted for where the job lives. SF Hospitalist lifted 25%. Rural MS dropped to 85%.</div>
+      <div class="f-desc" style="font-size:14px;color:var(--t2);line-height:1.5;">Every rate shifted for where the job lives. High cost markets lifted. Rural markets adjusted down.</div>
     </div>
   </div>
 </div>
