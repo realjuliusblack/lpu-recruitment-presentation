@@ -2321,30 +2321,30 @@ html, body {
 <!-- SLIDE 3: RATE ENGINE (IN DEV) -->
 <div class="slide" data-slide="3">
   <span class="section-label stagger-1">Rate Engine</span>
-  <h2 class="section-title stagger-2">Rates set by math. <span class="cyan">Not pulled from air.</span></h2>
-  <p class="stagger-3 indev-tag" style="margin-top:14px;font-size:15px;padding:10px 18px;">IN DEVELOPMENT · Awaiting methodology session with Ahmed</p>
-  <p class="section-desc stagger-4" style="max-width:760px;font-size:15px;margin-top:16px;">The framework is built and live inside the JD Engine. Every job flows through it today with a placeholder rate. Once Ahmed's methodology locks, the four calculators switch on in a single config change. No workflow rewrite, no downtime.</p>
-  <div class="finance-layout stagger-5" style="max-width:1080px;margin-top:20px;grid-template-columns:1fr 1fr;gap:14px;">
-    <div class="finance-card highlight" style="padding:18px 20px;">
-      <div class="f-label">1. Margin-Based <span style="color:var(--cyan);font-size:11px;margin-left:6px;">FRAMEWORK READY</span></div>
-      <div class="f-desc" style="font-size:14px;color:var(--t2);line-height:1.5;">When the source provides a bill rate: apply the specialty margin, publish the pay rate. Will run automatically once Ahmed sets the specialty margin table.</div>
+  <h2 class="section-title stagger-2" style="font-size:clamp(28px,3.6vw,42px);">Rates set by math. <span class="cyan">Not pulled from air.</span></h2>
+  <p class="stagger-3 indev-tag" style="margin-top:10px;font-size:13px;padding:6px 14px;">IN DEVELOPMENT · Awaiting methodology session with Ahmed</p>
+  <p class="section-desc stagger-4" style="max-width:820px;font-size:13px;margin-top:10px;line-height:1.5;">Framework is built and live inside the JD Engine. Every job flows through it today with a placeholder rate. Once Ahmed's methodology locks, the four calculators switch on in a single config change. No workflow rewrite.</p>
+  <div class="finance-layout stagger-5" style="max-width:1080px;margin-top:12px;grid-template-columns:1fr 1fr;gap:10px;">
+    <div class="finance-card highlight" style="padding:12px 16px;">
+      <div class="f-label" style="font-size:12px;">1. Margin-Based <span style="color:var(--cyan);font-size:10px;margin-left:6px;">FRAMEWORK READY</span></div>
+      <div class="f-desc" style="font-size:12px;color:var(--t2);line-height:1.45;margin-top:4px;">When the source provides a bill rate: apply the specialty margin, publish the pay rate. Runs automatically once Ahmed sets the specialty margin table.</div>
     </div>
-    <div class="finance-card highlight" style="padding:18px 20px;">
-      <div class="f-label">2. Historical Projection <span style="color:var(--cyan);font-size:11px;margin-left:6px;">FRAMEWORK READY</span></div>
-      <div class="f-desc" style="font-size:14px;color:var(--t2);line-height:1.5;">When no rate is provided: pull past jobs in the same specialty and region from our own board and project a fair rate. Uses real market data we already have.</div>
+    <div class="finance-card highlight" style="padding:12px 16px;">
+      <div class="f-label" style="font-size:12px;">2. Historical Projection <span style="color:var(--cyan);font-size:10px;margin-left:6px;">FRAMEWORK READY</span></div>
+      <div class="f-desc" style="font-size:12px;color:var(--t2);line-height:1.45;margin-top:4px;">When no rate is provided: pull past jobs in the same specialty and region from our own board and project a fair rate. Real market data we already have.</div>
     </div>
-    <div class="finance-card highlight" style="padding:18px 20px;">
-      <div class="f-label">3. National Benchmarks <span style="color:var(--cyan);font-size:11px;margin-left:6px;">FRAMEWORK READY</span></div>
-      <div class="f-desc" style="font-size:14px;color:var(--t2);line-height:1.5;">When the board has thin history: fall back to published industry compensation surveys. Same benchmarks hospital CFOs use to set their own comp bands.</div>
+    <div class="finance-card highlight" style="padding:12px 16px;">
+      <div class="f-label" style="font-size:12px;">3. National Benchmarks <span style="color:var(--cyan);font-size:10px;margin-left:6px;">FRAMEWORK READY</span></div>
+      <div class="f-desc" style="font-size:12px;color:var(--t2);line-height:1.45;margin-top:4px;">When the board has thin history: fall back to published industry compensation surveys. Same benchmarks hospital CFOs use to set their comp bands.</div>
     </div>
-    <div class="finance-card highlight" style="padding:18px 20px;">
-      <div class="f-label">4. Geographic Adjustment <span style="color:var(--cyan);font-size:11px;margin-left:6px;">FRAMEWORK READY</span></div>
-      <div class="f-desc" style="font-size:14px;color:var(--t2);line-height:1.5;">Every rate shifted for where the job lives. High cost markets lifted. Rural and hard to fill markets lifted further. One multiplier table, applied after the base calc.</div>
+    <div class="finance-card highlight" style="padding:12px 16px;">
+      <div class="f-label" style="font-size:12px;">4. Geographic Adjustment <span style="color:var(--cyan);font-size:10px;margin-left:6px;">FRAMEWORK READY</span></div>
+      <div class="f-desc" style="font-size:12px;color:var(--t2);line-height:1.45;margin-top:4px;">Every rate shifted for where the job lives. High cost markets lifted. Rural and hard to fill markets lifted further. One multiplier table, applied after the base calc.</div>
     </div>
   </div>
-  <div class="impact-box stagger-5" style="max-width:1080px;margin-top:18px;">
-    <div class="impact-label">What we need from Ahmed</div>
-    <div class="impact-text">One working session to capture the specialty margin table, the geographic multiplier map, and the fallback priority order. Everything else is already wired. The moment those numbers land in the config sheet, the engine goes live for every new job without touching the workflow.</div>
+  <div class="impact-box stagger-5" style="max-width:1080px;margin-top:10px;padding:12px 18px;">
+    <div class="impact-label" style="font-size:11px;">What we need from Ahmed</div>
+    <div class="impact-text" style="font-size:12px;line-height:1.5;margin-top:4px;">One working session to capture the specialty margin table, the geographic multiplier map, and the fallback priority order. Everything else is already wired. The moment those numbers land in the config sheet, the engine goes live.</div>
   </div>
 </div>
 
